@@ -1,6 +1,6 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/amirnsam/public_html/
-    - /bin/cp -R css $codingfront
-    - /bin/cp index.html $codingfront
+    - export DEPLOYPATH=/home/amirnsam/codingfront/
+    - /bin/cp -R css $DEPLOYPATH
+    - /bin/cp index.html $DEPLOYPATH
