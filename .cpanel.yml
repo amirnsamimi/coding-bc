@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/YOUR_CPANEL_USERNAME/public_html/
+    - /bin/cp -R css $public_html/codingfront
+    - /bin/cp index.html $public_html/codingfront
