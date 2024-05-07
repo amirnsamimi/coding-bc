@@ -2,5 +2,4 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/amirnsam/codingfront.amirnsamimi.com/
-    - /bin/cp -R css $DEPLOYPATH
     - /bin/cp index.html $DEPLOYPATH
