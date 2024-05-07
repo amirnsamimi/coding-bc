@@ -1,0 +1,11 @@
+{
+  "name": "coding-front",
+  "version": "1.0.0",
+  "description": "Review Core Concepts and Learning Vue.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amir Samimi 2024",
+  "license": "ISC"
+}
