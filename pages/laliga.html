@@ -12,25 +12,100 @@
 
     <title>Laliga</title>
     <style>
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
       body {
         font-family: montserrat;
         padding: 0 8rem;
+        background-color: #f6f6f6;
+      }
+
+      h1 {
+        display: none;
+      }
+
+      a {
+        color: #000;
+        text-decoration: none;
+        font-weight: 500;
+        line-height: 2rem;
+      }
+      /* navbar */
+      nav {
+        text-align: center;
+        padding: 1rem 0;
+      }
+      nav li {
+        display: inline;
+        margin: 0 1.5rem;
       }
       nav a {
         text-decoration: none;
         color: #000;
         font-weight: bold;
       }
+
+      /* paragraph anchor tags */
       p a {
         color: #ff4b44;
       }
-      nav {
-        text-align: center;
-        padding: 2rem 0;
+
+      /* table styles */
+      table {
+        width: 100%;
+        background-color: white;
       }
-      nav li {
-        display: inline;
-        margin: 0 1.5rem;
+      td:not(:nth-child(2), :nth-child(3)) {
+        text-align: center;
+      }
+      table,
+      th,
+      td {
+        border: 1px solid #d9d9d9;
+        border-collapse: collapse;
+        padding: 0.5rem 0.5rem;
+      }
+      thead {
+        background-color: #d9d9d9;
+      }
+
+      /* hr style */
+      .customHr {
+        margin: 2rem 0;
+      }
+
+      /* card */
+      #news div{
+            display: inline-block;
+      }
+
+      .card-container {
+        width: 48%;
+        background-color: white;
+        padding: 2rem;
+        margin:0.5%;
+        border-radius: 15px;
+      }
+      .card-container > div,
+      img {
+        text-align: right;
+        vertical-align: middle;
+        margin: 2px;
+
+        /* 
+        display: flex;
+        justify-content: flex-end;
+        gap:4px; */
+      }
+
+
+
+      footer {
+        text-align: center;
+        font-size: smaller;
+        padding: 0 0 1rem 0;
       }
     </style>
   </head>
@@ -43,13 +118,13 @@
           width="200"
         />
         <ul>
-          <li><a href="/about" title="redirect to about page">About</a></li>
+          <li><a href="#about" title="redirect to about page">About</a></li>
           <li>
-            <a href="/records" title="redirect to records page">Records</a>
+            <a href="#records" title="redirect to records page">Records</a>
           </li>
-          <li><a href="/news" title="redirect to news page">News</a></li>
+          <li><a href="#news" title="redirect to news page">News</a></li>
           <li>
-            <a href="/sponsors" title="redirect to sponsors page">Sponsors</a>
+            <a href="#sponsors" title="redirect to sponsors page">Sponsors</a>
           </li>
         </ul>
       </nav>
@@ -57,7 +132,7 @@
     <hr />
     <main>
       <h1>Laliga</h1>
-      <section>
+      <section id="laliga">
         <h2>Laliga</h2>
         <p>
           The
@@ -101,8 +176,13 @@
           (19)[d) and UEFA Men's Player of the Year awards (12).
         </p>
       </section>
-      <hr />
-      <section>
+      <hr class="customHr" />
+      <section id="records">
+        <h2>Records</h2>
+        <p>
+          <strong> Most goals </strong>
+          As of matches played 20 may 2019
+        </p>
         <table>
           <thead>
             <tr>
@@ -198,6 +278,89 @@
           </tbody>
         </table>
       </section>
+      <hr class="customHr" />
+      <section id="news">
+        <h2>News</h2>
+        <div class="card-container">
+          <img src="../assets/images/player.png" alt="player1" />
+          <p>
+            Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
+            Nou in the Future
+          </p>
+          <div>
+            9
+            <img
+              src="../assets/icons/message.svg"
+              alt="message icon"
+              width="24px"
+            />
+          </div>
+        </div>
+        <div class="card-container">
+            <img src="../assets/images/player2.png" alt="player2" />
+            <p>
+              Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
+              Nou in the Future
+            </p>
+            <div>
+              11
+              <img
+                src="../assets/icons/message.svg"
+                alt="message icon"
+                width="24px"
+              />
+            </div>
+          </div>
+          <div class="card-container">
+            <img src="../assets/images/player3.png" alt="player3" />
+            <p>
+              Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
+              Nou in the Future
+            </p>
+            <div>
+              6
+              <img
+                src="../assets/icons/message.svg"
+                alt="message icon"
+                width="24px"
+              />
+            </div>
+          </div>
+          <div class="card-container">
+            <img src="../assets/images/player4.png" alt="player4" />
+            <p>
+              Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
+              Nou in the Future
+            </p>
+            <div>
+              3
+              <img
+                src="../assets/icons/message.svg"
+                alt="message icon"
+                width="24px"
+              />
+            </div>
+          </div>
+      </section>
+      <hr class="customHr" />
+      <section id="sponsors">
+        <h2>Sponsors</h2>
+        <ul>
+          <li><a href="#" title="EA Sports">EA Sports</a></li>
+          <li><a href="#" title="Puma">Puma</a></li>
+          <li><a href="#" title="Microsoft">Microsoft</a></li>
+          <li>
+            <a href="#" title="Mahou-San Miguel Group"
+              >Mahou-San Miguel Group</a
+            >
+          </li>
+          <li><a href="#" title="Sorare">Sorare</a></li>
+          <li><a href="#" title="BKT Tyres">BKT Tyres</a></li>
+          <li><a href="#" title="Visit Iran">Visit Iran</a></li>
+        </ul>
+      </section>
+      <hr class="customHr" />
     </main>
+    <footer>Developed By Amir Samimi, May 2024</footer>
   </body>
 </html>
