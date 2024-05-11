@@ -1,0 +1,82 @@
+/* Selects all elements with class="column" */
+.column {
+    color:white;
+}
+
+/* Selects element with id="first-item" */
+#first-item {
+    color: white;
+}
+
+/* Match multiple selectors to the same CSS rule, using a comma-separated list. In this example, the text for both h1 and h2 is set to red. */
+h1, h2 {
+    color: white;
+}
+
+/* Selects all p tags */
+p {
+    color:white;
+}
+
+/* Select h3 elements with the section-heading class */
+h3.section-heading {
+  color: blue;
+}
+
+/* Select elements with the section-heading and button class */
+.section-heading.button {
+  color: pink;
+}
+
+/* Selects and styles only the direct children of the element with class "menu" */
+.menu > li {
+    color: red;
+  }
+
+/* Selects the h3 element that comes right after an h2 element */
+h2 + h3{
+color: red;
+  }
+
+/* The General Selector is specified by a tilde sign (~) in CSS and is a selector that helps in selecting the sibling elements of the same parent without them even being adjacent to each other. */
+li ~ li {
+    color: red;
+}
+
+/* select all elements */
+*{
+
+}
+
+/* select an a tag with specific attribute */
+a[attribute="value"]{
+    color:green;
+}
+
+
+/* padding types */
+selector {
+    padding: 12px;
+    padding: 12px 20px; /* padding-in-y-axis:12px; padding-in-x-axis:  */
+    padding: 12px 20px; /* padding-top:12px; padding-right: 20px; padding-bottom: 12px; padding-left:20px;  */
+} 
+
+/* margin types */
+selector {
+    margin: 12px;
+    margin: 12px 20px; /* margin-in-y-axis:12px; margin-in-x-axis:  */
+    margin: 12px 20px; /* margin-top:12px; margin-right: 20px; margin-bottom: 12px; margin-left:20px;  */
+} 
+
+/* others */
+selector {
+   background-color: colorname;
+   color: colorname;
+   font-weight: bold; 
+   list-style: none;
+   font-family: Tahoma;
+   font-size: 12px;
+   text-align:center;
+   display: block;
+} 
+
