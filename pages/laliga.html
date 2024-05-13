@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <title>Laliga</title>
     <style>
       * {
         box-sizing: border-box;
@@ -21,11 +10,7 @@
         padding: 0 8rem;
         background-color: #f6f6f6;
       }
-
-      h1 {
-        display: none;
-      }
-
+   
       a {
         color: #000;
         text-decoration: none;
@@ -33,15 +18,15 @@
         line-height: 2rem;
       }
       /* navbar */
-      nav {
+      header {
         text-align: center;
         padding: 1rem 0;
       }
-      nav li {
+      header li {
         display: inline;
         margin: 0 1.5rem;
       }
-      nav a {
+      header a {
         text-decoration: none;
         color: #000;
         font-weight: bold;
@@ -54,12 +39,13 @@
 
       /* table styles */
       table {
-        width: 100vw;
+        width: 100%;
         background-color: white;
         overflow: scroll;
-      }
-      td:not(:nth-child(2), :nth-child(3)) {
         text-align: center;
+      }
+      .leftAligner{
+        text-align: left;
       }
       table,
       th,
@@ -89,16 +75,13 @@
         margin:0.5%;
         border-radius: 15px;
       }
-      .card-container > div,
-      img {
+      .comments{
+        width: 100%;
+      }
+      .comments, img{
         text-align: right;
         vertical-align: middle;
         margin: 2px;
-
-        /* 
-        display: flex;
-        justify-content: flex-end;
-        gap:4px; */
       }
 
 
@@ -112,7 +95,6 @@
   </head>
   <body>
     <header>
-      <nav>
         <img
           src="../assets/images/laligalogo.png"
           alt="laliga-logo"
@@ -128,13 +110,11 @@
             <a href="#sponsors" title="redirect to sponsors page">Sponsors</a>
           </li>
         </ul>
-      </nav>
     </header>
     <hr />
     <main>
-      <h1>Laliga</h1>
       <section id="laliga">
-        <h2>Laliga</h2>
+        <h1>Laliga</h1>
         <p>
           The
           <strong> Campeonato Nacional de Liga de Primera División,</strong>
@@ -198,80 +178,80 @@
           <tbody>
             <tr>
               <td>1</td>
-              <td>Lionel Messi</td>
-              <td>Barcelona</td>
+              <td class="leftAligner">Lionel Messi</td>
+              <td class="leftAligner">Barcelona</td>
               <td>2004-2021</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>2</td>
-              <td>Christiano Ronaldo</td>
-              <td>Real Madrid</td>
+              <td class="leftAligner">Christiano Ronaldo</td>
+              <td class="leftAligner">Real Madrid</td>
               <td>2009-2018</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>3</td>
-              <td>Telmo Zarrat</td>
-              <td>Athletic Club</td>
+              <td class="leftAligner">Telmo Zarrat</td>
+              <td class="leftAligner">Athletic Club</td>
               <td>1940-1955</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>4</td>
-              <td>karim Benzema</td>
-              <td>Real Madrid</td>
+              <td class="leftAligner">karim Benzema</td>
+              <td class="leftAligner">Real Madrid</td>
               <td>2009-2023</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>5</td>
-              <td>Hugo Sanchez</td>
-              <td>Atletico Madrid, Real Madrid, Rayo Vallecano</td>
+              <td class="leftAligner">Hugo Sanchez</td>
+              <td class="leftAligner">Atletico Madrid, Real Madrid, Rayo Vallecano</td>
               <td>1981-1994</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>6</td>
-              <td>Raul</td>
-              <td>Real Madrid</td>
+              <td class="leftAligner">Raul</td>
+              <td class="leftAligner">Real Madrid</td>
               <td>1994-2010</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>7</td>
-              <td>Alfredo Di Stefanot</td>
-              <td>Real Madrid, Espanyol</td>
+              <td class="leftAligner">Alfredo Di Stefanot</td>
+              <td class="leftAligner">Real Madrid, Espanyol</td>
               <td>1953-1966</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>8</td>
-              <td>Cesar Rodriguezt</td>
-              <td>Granda, Barcelona, Cultural Leonesa, Elche</td>
+              <td class="leftAligner">Cesar Rodriguezt</td>
+              <td class="leftAligner">Granda, Barcelona, Cultural Leonesa, Elche</td>
               <td>1939-1955</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>9</td>
-              <td>Quinit</td>
-              <td>Sporting Gijon, Barcelona</td>
+              <td class="leftAligner">Quinit</td>
+              <td class="leftAligner">Sporting Gijon, Barcelona</td>
               <td>1970-1987</td>
               <td>474</td>
               <td>0.91</td>
             </tr>
             <tr>
               <td>10</td>
-              <td>Pahinot</td>
-              <td>Celta Vigo, Real Madrid, Deportivo La Coruña</td>
+              <td class="leftAligner">Pahinot</td>
+              <td class="leftAligner">Celta Vigo, Real Madrid, Deportivo La Coruña</td>
               <td>1943-1956</td>
               <td>474</td>
               <td>0.91</td>
@@ -288,7 +268,7 @@
             Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
             Nou in the Future
           </p>
-          <div>
+          <div class="comments">
             9
             <img
               src="../assets/icons/message.svg"
@@ -303,7 +283,7 @@
               Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
               Nou in the Future
             </p>
-            <div>
+            <div class="comments">
               11
               <img
                 src="../assets/icons/message.svg"
@@ -318,7 +298,7 @@
               Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
               Nou in the Future
             </p>
-            <div>
+            <div class="comments">
               6
               <img
                 src="../assets/icons/message.svg"
@@ -333,7 +313,7 @@
               Back to Barcelona hot take: Why Lionel Messi Should Return to Camp
               Nou in the Future
             </p>
-            <div>
+            <div class="comments">
               3
               <img
                 src="../assets/icons/message.svg"
