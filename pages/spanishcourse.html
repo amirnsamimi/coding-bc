@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Spanish Course</title>
+    <style>
+      body {
+        padding: 0;
+        margin: 0;
+        font-family: inter;
+      }
+
+      .primary-button {
+        background-color: #d8460b;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 12px;
+        text-decoration: none;
+      }
+      .container {
+        width: 980px;
+        margin: auto;
+      }
+
+      .white-space {
+        padding: 40px 0;
+      }
+      header {
+        width: 980px;
+        margin: auto;
+        padding: 40px 0;
+      }
+      .list-container {
+        width: 485px;
+        display: inline-block;
+        padding: 0;
+        margin: 0;
+      }
+      .list-container li {
+        display: inline;
+        padding: 16px 12px;
+      }
+      .list-container a {
+        text-decoration: none;
+        color: black;
+        font-size: 18px;
+        font-weight: 400;
+      }
+      .button-container {
+        width: 485px;
+        text-align: right;
+        display: inline-block;
+      }
+
+      .banner {
+        background-color: #f2624f;
+        border-radius: 40px;
+      }
+      .banner div {
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .banner-image {
+        width: 408px;
+        height: 480px;
+        padding: 16px 0 0 0;
+        text-align: right;
+      }
+      .banner-image img {
+        width: 384px;
+        height: 480px;
+      }
+      .banner-text {
+        width: 535px;
+        display: inline-block;
+        color: white;
+        padding: 0 0 0 32px;
+        font-size: 15px;
+      }
+      .banner-text h1 {
+        font-size: 48px;
+        margin: 0;
+      }
+      .banner-text p {
+        margin: 40px 0;
+      }
+      .card-container ul {
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+      }
+      .country-card {
+        background-color: #f6f6f2;
+        list-style: none;
+        text-align: center;
+        display: inline-block;
+        width: 20%;
+        margin: 0 5px;
+        padding: 16px;
+        border-radius: 36px;
+      }
+      .country-card a {
+        color: black;
+        text-decoration: none;
+      }
+      .country-card h3 {
+        margin: 24px 0 4px 0;
+      }
+      .countries p{
+        color:#929292;
+      }
+      .getStartedBanner {
+        background-color: #f9f2db;
+        display: inline-block;
+        width: 100%;
+        margin: 56px 0;
+      }
+
+      .getStartedBanner-section-1 {
+        width: 70%;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      .getStartedBanner-section-2 {
+        width: 29%;
+        display: inline-block;
+      }
+      .getStartedBanner h2 {
+        font-size: 36px;
+        margin: 0;
+      }
+      .text-link{
+        color:#d8460b;
+        text-decoration: none;
+      }
+      .duration p{
+        color:#929292;
+      
+      }
+      .examples p{
+        color:#929292;
+      
+      }
+      .examples li{
+          color:#d8460b;
+      }
+      .examples li span{
+        color:#929292;
+      }
+      
+      footer{
+        padding: 30px 0px 30px 0px;
+        background-color: #F6F6F2;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <ul class="list-container">
+        <li><a href="#" title="Home">Home</a></li>
+        <li><a href="countries" title="Countries">Countries</a></li>
+        <li><a href="#" title="Duration">Duration</a></li>
+        <li><a href="#" title="Examples">Examples</a></li>
+      </ul>
+      <div class="button-container">
+        <a href="#" title="get started" class="primary-button"> Get Started </a>
+      </div>
+    </header>
+    <main class="white-space">
+      <section class="banner container">
+        <div class="banner-text ">
+          <h1>Learn Spanish Online from Native Teachers</h1>
+          <p>
+            Grow your confidence in Spanish conversation, grammar and reading
+            with live, online classes, professional teachers and a schedule that
+            suits you.
+          </p>
+          <a href="#" title="get started" class="primary-button">
+            Get Started
+          </a>
+        </div>
+        <div class="banner-image">
+          <img src="../assets/images/person.png" alt="person imge" />
+        </div>
+      </section>
+      <section id="countries" class="countries container white-space">
+        <h2>Truly Experience Foreign Countries</h2>
+        <p>
+          Travel around the world and meet millions of spanish speaking perople
+        </p>
+        <div class="card-container">
+          <ul>
+            <li class="country-card">
+              <a href="#" title="country card"
+                ><img src="../assets/images/mexico.png" alt="" />
+                <h3>Mexico</h3>
+                <span>+130 milion speakers</span></a
+              >
+            </li>
+            <li class="country-card">
+              <a href="#" title="country card"
+                ><img src="../assets/images/colombia.png" alt="" />
+                <h3>Colombia</h3>
+                <span>+50 million speakers</span></a
+              >
+            </li>
+            <li class="country-card">
+              <a href="#" title="country card"
+                ><img src="../assets/images/spain.png" alt="" />
+                <h3>Spain</h3>
+                <span>+47 million speakers </span></a
+              >
+            </li>
+            <li class="country-card">
+              <a href="#" title="country card"
+                ><img src="../assets/images/argentina.png" alt="" />
+                <h3>Argentina</h3>
+                <span>+45 million speakers </span></a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="getStartedBanner white-space">
+        <div class="container ">
+          <div class="getStartedBanner-section-1">
+            <h2>Ready to start learning Spanish?</h2>
+            <h2>Lets try some!</h2>
+          </div>
+          <div class="button-container getStartedBanner-section-2">
+            <a href="#" title="get started" class="primary-button">
+              Get Started
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="duration" class="duration container white-space">
+        <h2>How long does it take to learn Spanish?</h2>
+        <p>
+          People often want to know how to learn Spanish fast or are looking for
+          the easiest way to learn Spanish. The US Foreign Service Institute
+          suggests it takes <a href="#" title="number" class="text-link">600-750</a> hours for an
+          English-speaker to learn Spanish fluently. Remember, how long it takes
+          to learn Spanish really depends on you. Your time commitment, learning
+          plan, materials, and other resources are all important. Students
+          without a learning plan can be confused about what to study and lack
+          awareness of whether they’re improving. A lack of a study plan is
+          often why students reach a basic level of Spanish and then plateau or
+          stop studying altogether. Your materials and resources will also be a
+          big factor. With an effective curriculum of lessons and a
+          native-speaking teacher, your Spanish learning will not only be
+          quicker but more comprehensive. Some people also have the resource of
+          an immersive environment: If you live in a Spanish-speaking country
+          you’re likely to learn faster. Finally, your time commitment will
+          determine how quickly you learn. A student that can learn 8 hours per
+          week will learn much faster than a student who studies just 1 hour per
+          week.
+        </p>
+      </section>
+      <section id="examples" class="examples container white-space">
+        <h2>Common Spanish phrases</h2>
+        <p>
+          There are some common Spanish phrases that can help you go from zero
+          to 60 in your speaking ability.
+        </p>
+        <ul>
+          <li><a href="#" title="how are you" class="text-link">How are you?</a><span> ¿Qué tal?</span></li>
+          <li>
+            <span>This can also be used for “how is [something]?” For example, “how
+            was your weekend?” ¿Qué tal tu fin de semana?</span>
+          </li>
+          <li><span>Nice to meet you. Mucho gusto.</span></li>
+          <li><span>Where are you from? ¿De dónde eres?</span></li>
+          <li><span>I’m from… Soy de…</span></li>
+          <li><span>Have a good one! Que le vaya bien.</span></li>
+          <li><span>You can say this whenever you leave a shop or a restaurant.</span></li>
+          <li><span>Excuse me. Disculpe.</span></li>
+          <li><span>This is for calling the attention of someone like a waiter.</span></li>
+        </ul>
+      </section>
+    </main>
+    <footer><div class="container">&copy; 2024 Lingo - All Rights Reserved</div></footer>
+  </body>
+</html>
