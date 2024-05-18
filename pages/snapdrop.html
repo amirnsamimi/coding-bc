@@ -32,52 +32,52 @@
             text-decoration: none;
         } */
 
-        /* paddings */
-        .p-40{
-            padding: 40px;
-        }
-        .pt-40{
-            padding-top: 40px;
-        }
-        .pb-40{
-            padding-bottom: 40px;
-        }
-        .pr-40{
-            padding-right: 40px;
-        }
-        .pl-40{
-            padding-left: 40px;
-        }
-        .py-40{
-            padding-block:40px ;
-        }
-        .px-40{
-            padding-inline: 40px;
-        }
-        
-        .p-80{
-            padding: 80px;
-        }
-        .pt-80{
-            padding-top: 80px;
-        }
-        .pb-80{
-            padding-bottom: 80px;
-        }
-        .pr-80{
-            padding-right: 80px;
-        }
-        .pl-80{
-            padding-left: 80px;
-        }
-        .py-80{
-            padding-block:80px ;
-        }
-        .px-80{
-            padding-inline: 80px;
-        }
-        
-       /* grid layout */
+      /* paddings */
+      .p-40 {
+        padding: 40px;
+      }
+      .pt-40 {
+        padding-top: 40px;
+      }
+      .pb-40 {
+        padding-bottom: 40px;
+      }
+      .pr-40 {
+        padding-right: 40px;
+      }
+      .pl-40 {
+        padding-left: 40px;
+      }
+      .py-40 {
+        padding-block: 40px;
+      }
+      .px-40 {
+        padding-inline: 40px;
+      }
+
+      .p-80 {
+        padding: 80px;
+      }
+      .pt-80 {
+        padding-top: 80px;
+      }
+      .pb-80 {
+        padding-bottom: 80px;
+      }
+      .pr-80 {
+        padding-right: 80px;
+      }
+      .pl-80 {
+        padding-left: 80px;
+      }
+      .py-80 {
+        padding-block: 80px;
+      }
+      .px-80 {
+        padding-inline: 80px;
+      }
+
+      /* grid layout */
       .col-1 {
         width: calc((100% / 12) * 1);
       }
@@ -118,15 +118,17 @@
       .container {
         width: calc((100% / 12) * 12);
         display: flex;
-       
       }
-      .center{
+      .center {
         justify-content: center;
       }
-      .align-center{
+      .text-center {
+        text-align: center;
+      }
+      .align-center {
         align-items: center;
       }
-      .aling-bottom{
+      .aling-bottom {
         align-items: end;
       }
 
@@ -137,7 +139,6 @@
       .column {
         display: flex;
         flex-direction: column;
-   
       }
       /* hero ( banner ) */
 
@@ -160,43 +161,86 @@
 
       .banner-container {
         background: radial-gradient(circle at bottom right, #59c3c3, #4062bb);
-       
+
         display: flex;
         flex-direction: column;
         justify-content: space-between;
       }
-      .banner-container h1{
+      .banner-container h1 {
         font-size: 48px;
         color: #fff;
       }
-      .banner-container p{
+      .banner-container p {
         color: #fff;
         font-weight: 300;
         letter-spacing: 3px;
         word-spacing: 2px;
         line-height: 24px;
       }
-      .banner-main-image img{
+      .banner-main-image img {
         margin-bottom: -50px;
         z-index: 1;
-      } 
+      }
 
-      .banner-lower{
+      .banner-lower {
         font: 18px;
         font-weight: 500;
         color: #00000040;
         height: 100px;
-        background-color: #F2F7F8;
+        background-color: #f2f7f8;
       }
-      .banner-lower ul  li{
+      .banner-lower ul li {
         list-style: none;
         margin: 0 25px;
       }
-      .banner-lower ul li img{
+      .banner-lower ul li img {
         height: 25px;
         width: auto;
       }
-      
+
+      /* feature */
+      .features p {
+        color: #00000060;
+        font-weight: 400;
+      }
+      .features ul {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .features ul li {
+        list-style-type: none;
+        text-align: center;
+      }
+
+    /* editor */
+      .editor-container{
+        background-color: #F2F7F8;
+        height: 445px;
+      }
+
+      .editor-container img{
+        height: auto;
+        width: 130px;
+      }
+      .editor-container p{
+        color: #00000080;
+      }
+      .editor-container a{
+        color: #4062BB;
+        font-weight: 400;
+        text-decoration: none;
+      }
+      /* footer */
+    footer{
+        background-color: #4062BB;
+        height: 240px;
+        color: #fff;
+    }
+    footer ul li{
+        list-style-type: none;
+        margin: 0 20px;
+    }
     </style>
   </head>
   <body>
@@ -208,7 +252,8 @@
         </nav>
     </header> -->
     <main>
-      <section class="banner-container ">
+    <!-- banner section -->
+      <section class="banner-container">
         <div class="container center">
           <div class="banner-top row pt-40 pb-80 col-8">
             <ul>
@@ -217,43 +262,135 @@
           </div>
         </div>
         <div class="container center">
-            <div class="row center col-12">
-          <div class="column py-80 col-5">
-            <div class="col-8">
-            <h1>Ready to Share your local files with your friends?</h1>
-            <p>
-              Snapdrop is a local file sharing solution which completely works
-              in your browser. A bit like Apple's Airdrop, but not only for
-              Apple devices.
-            </p>
-            <div class="row">
-              <a href="#" title="get it from google">
-                <img src="../assets/icons/google-btn.png" alt="google btn" />
-              </a>
-              <a href="#" title="get it from google">
-                <img src="../assets/icons/android-btn.png" alt="android btn" />
-              </a>
-              <a href="#" title="get it from google">
-                <img src="../assets/icons/android-btn.png" alt="android btn" />
-              </a>
+          <div class="row center col-12">
+            <div class="column py-80 col-5">
+              <div class="col-8">
+                <h1>Ready to Share your local files with your friends?</h1>
+                <p>
+                  Snapdrop is a local file sharing solution which completely
+                  works in your browser. A bit like Apple's Airdrop, but not
+                  only for Apple devices.
+                </p>
+                <div class="row">
+                  <a href="#" title="get it from google">
+                    <img
+                      src="../assets/icons/google-btn.png"
+                      alt="google btn"
+                    />
+                  </a>
+                  <a href="#" title="get it from google">
+                    <img
+                      src="../assets/icons/android-btn.png"
+                      alt="android btn"
+                    />
+                  </a>
+                  <a href="#" title="get it from google">
+                    <img
+                      src="../assets/icons/android-btn.png"
+                      alt="android btn"
+                    />
+                  </a>
+                </div>
+              </div>
             </div>
+            <div class="row col-3 banner-main-image">
+              <img src="../assets/images/phone.png" alt="" />
             </div>
           </div>
-          <div class="row col-3 banner-main-image">
-            <img src="../assets/images/phone.png" alt="">
-          </div>
-        </div>
         </div>
         <div class="banner-lower container center align-center">
-            <div class="row col-8 align-center">
-            As featured in: <ul class="row features-container"> <li><a href=""><img src="../assets/icons/techcrunch.svg" alt="tech crunch"></a></li>
-                <li><a href=""><img src="../assets/icons/wired.svg" alt="tech crunch"></a></li>
-                <li><a href=""><img src="../assets/icons/Gizmodo.svg" alt="tech crunch"></a></li>
-        </ul> 
-    </div>
+          <div class="row col-8 align-center">
+            As featured in:
+            <ul class="row features-container">
+              <li>
+                <a href=""
+                  ><img src="../assets/icons/techcrunch.svg" alt="tech crunch"
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../assets/icons/wired.svg" alt="tech crunch"
+                /></a>
+              </li>
+              <li>
+                <a href=""
+                  ><img src="../assets/icons/Gizmodo.svg" alt="tech crunch"
+                /></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <!-- features section -->
+      <section class="container center features pt-80">
+        <div class="column col-8 align-center">
+          <div class="column col-6 text-center">
+            <h2>Amazing Features</h2>
+            <p>
+              Snapdorp is packed with features and possibilities, making it easy
+              to share everything you have on you phone with your friends and
+              family
+            </p>
+          </div>
+          <div class="row col-12 center pt-40 pb-80">
+            <ul class="row col-12">
+              <li>
+                <img src="../assets/icons/openvpn.svg" alt="" />
+                <h3>Open Source</h3>
+                <p>
+                  App is developed using some of the best security protocols. On
+                  top of that, it’s open-source, so developers are continuously
+                  improving it.
+                </p>
+              </li>
+              <li>
+                <img src="../assets/icons/crossplatform.svg" alt="" />
+                <h3>Cross Platform</h3>
+                <p>
+                  Snapdrop works in your browser. A bit like Apple's Airdrop,
+                  but not only for Apple devices. Windows, Linux, Android,
+                  IPhone, Mac - no problem at all!
+                </p>
+              </li>
+              <li>
+                <img src="../assets/icons/hand.svg" alt="" />
+                <h3>Easy to Use</h3>
+                <p>
+                  Everything is pretty straightforward. As long as you have both
+                  devices connected to the same Wi-Fi network, you can access
+                  SnapDrop and send your files.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      <section class="container editor-container center align-center">
+        <div class="column col-4 align-center">
+                <img src="../assets/images/snapdrop-user.png" alt="user image">
+                <h2>
+                    Niloy Rashed Abir
+                </h2>
+                <a href="#" title="to editor website">
+                    App Magazin Editor
+                </a>
+                <p class="text-center">
+                    I was tried of switching app to transfer files between my pc and phone but then I found this app. It is actually brilliant, simple and clean. Thank you devs
+                </p>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="center align-center column">
+        <p>Copyright © 2024 SnapDrop. Developed by Amir Samimi
+        </p>
+        <div class="pt-40">
+            <ul class="row">
+                <li><img src="../assets/icons/whatsapp.svg" alt="whats app icon"></li>
+                <li><img src="../assets/icons/snapdrop-instagram.svg" alt=""></li>
+                <li><img src="../assets/icons/telegram.svg" alt=""></li>
+                <li><img src="../assets/icons/twitter.svg" alt=""></li>
+            </ul>
+        </div>
+    </footer>
   </body>
 </html>
