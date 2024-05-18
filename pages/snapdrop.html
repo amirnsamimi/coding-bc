@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <title>Snap Drop</title>
+    <style>
+      * {
+        font-family: roboto;
+      }
+
+      body,
+      ul {
+        padding: 0;
+        margin: 0;
+      }
+
+      /* nav bar */
+
+      /* header nav ul li{
+            list-style-type: none;
+            display: fixed;
+        }
+        header nav ul li a{
+            font-weight: bold;
+            text-decoration: none;
+        } */
+
+        /* paddings */
+        .p-40{
+            padding: 40px;
+        }
+        .pt-40{
+            padding-top: 40px;
+        }
+        .pb-40{
+            padding-bottom: 40px;
+        }
+        .pr-40{
+            padding-right: 40px;
+        }
+        .pl-40{
+            padding-left: 40px;
+        }
+        .py-40{
+            padding-block:40px ;
+        }
+        .px-40{
+            padding-inline: 40px;
+        }
+        
+        .p-80{
+            padding: 80px;
+        }
+        .pt-80{
+            padding-top: 80px;
+        }
+        .pb-80{
+            padding-bottom: 80px;
+        }
+        .pr-80{
+            padding-right: 80px;
+        }
+        .pl-80{
+            padding-left: 80px;
+        }
+        .py-80{
+            padding-block:80px ;
+        }
+        .px-80{
+            padding-inline: 80px;
+        }
+        
+       /* grid layout */
+      .col-1 {
+        width: calc((100% / 12) * 1);
+      }
+      .col-2 {
+        width: calc((100% / 12) * 2);
+      }
+      .col-3 {
+        width: calc((100% / 12) * 3);
+      }
+      .col-4 {
+        width: calc((100% / 12) * 4);
+      }
+      .col-5 {
+        width: calc((100% / 12) * 5);
+      }
+      .col-6 {
+        width: calc((100% / 12) * 6);
+      }
+      .col-7 {
+        width: calc((100% / 12) * 7);
+      }
+      .col-8 {
+        width: calc((100% / 12) * 8);
+      }
+      .col-9 {
+        width: calc((100% / 12) * 9);
+      }
+      .col-10 {
+        width: calc((100% / 12) * 10);
+      }
+      .col-11 {
+        width: calc((100% / 12) * 11);
+      }
+      .col-12 {
+        width: calc((100% / 12) * 12);
+      }
+
+      .container {
+        width: calc((100% / 12) * 12);
+        display: flex;
+       
+      }
+      .center{
+        justify-content: center;
+      }
+      .align-center{
+        align-items: center;
+      }
+      .aling-bottom{
+        align-items: end;
+      }
+
+      .row {
+        display: flex;
+      }
+
+      .column {
+        display: flex;
+        flex-direction: column;
+   
+      }
+      /* hero ( banner ) */
+
+      .banner-top ul li {
+        list-style-type: none;
+        display: fixed;
+      }
+
+      .banner-top ul li {
+        list-style-type: none;
+        display: fixed;
+      }
+
+      .banner-top ul li a {
+        color: #fff;
+        font-weight: bold;
+        text-decoration: none;
+        font-size: 21px;
+      }
+
+      .banner-container {
+        background: radial-gradient(circle at bottom right, #59c3c3, #4062bb);
+       
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .banner-container h1{
+        font-size: 48px;
+        color: #fff;
+      }
+      .banner-container p{
+        color: #fff;
+        font-weight: 300;
+        letter-spacing: 3px;
+        word-spacing: 2px;
+        line-height: 24px;
+      }
+      .banner-main-image img{
+        margin-bottom: -50px;
+        z-index: 1;
+      } 
+
+      .banner-lower{
+        font: 18px;
+        font-weight: 500;
+        color: #00000040;
+        height: 100px;
+        background-color: #F2F7F8;
+      }
+      .banner-lower ul  li{
+        list-style: none;
+        margin: 0 25px;
+      }
+      .banner-lower ul li img{
+        height: 25px;
+        width: auto;
+      }
+      
+    </style>
+  </head>
+  <body>
+    <!-- <header>
+        <nav>
+            <ul>
+                <li><a>Snapdrop</a></li>
+            </ul>
+        </nav>
+    </header> -->
+    <main>
+      <section class="banner-container ">
+        <div class="container center">
+          <div class="banner-top row pt-40 pb-80 col-8">
+            <ul>
+              <li><a>Snapdrop</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="container center">
+            <div class="row center col-12">
+          <div class="column py-80 col-5">
+            <div class="col-8">
+            <h1>Ready to Share your local files with your friends?</h1>
+            <p>
+              Snapdrop is a local file sharing solution which completely works
+              in your browser. A bit like Apple's Airdrop, but not only for
+              Apple devices.
+            </p>
+            <div class="row">
+              <a href="#" title="get it from google">
+                <img src="../assets/icons/google-btn.png" alt="google btn" />
+              </a>
+              <a href="#" title="get it from google">
+                <img src="../assets/icons/android-btn.png" alt="android btn" />
+              </a>
+              <a href="#" title="get it from google">
+                <img src="../assets/icons/android-btn.png" alt="android btn" />
+              </a>
+            </div>
+            </div>
+          </div>
+          <div class="row col-3 banner-main-image">
+            <img src="../assets/images/phone.png" alt="">
+          </div>
+        </div>
+        </div>
+        <div class="banner-lower container center align-center">
+            <div class="row col-8 align-center">
+            As featured in: <ul class="row features-container"> <li><a href=""><img src="../assets/icons/techcrunch.svg" alt="tech crunch"></a></li>
+                <li><a href=""><img src="../assets/icons/wired.svg" alt="tech crunch"></a></li>
+                <li><a href=""><img src="../assets/icons/Gizmodo.svg" alt="tech crunch"></a></li>
+        </ul> 
+    </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+  </body>
+</html>
