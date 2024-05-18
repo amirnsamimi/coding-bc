@@ -32,26 +32,30 @@
       .white-space {
         padding: 40px 0;
       }
-      header {
-        width: 980px;
-        margin: auto;
-        padding: 40px 0;
+
+      .navigation-bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
-      .list-container {
-        width: 485px;
-        display: inline-block;
+
+      .navigation-bar ul{
+        display: flex;
         padding: 0;
-        margin: 0;
       }
-      .list-container li {
-        display: inline;
-        padding: 16px 12px;
+      .navigation-bar li{
+        list-style: none;
+        margin-right:16px;
       }
-      .list-container a {
-        text-decoration: none;
+      .navigation-bar.btn {
+        display: flex;
+        justify-content: end;
+      }
+      .navigation-bar li a {
         color: black;
         font-size: 18px;
         font-weight: 400;
+        text-decoration: none;
       }
       .button-container {
         width: 485px;
@@ -62,23 +66,24 @@
       .banner {
         background-color: #f2624f;
         border-radius: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
-      .banner div {
-        display: inline-block;
-        vertical-align: middle;
-      }
+ 
       .banner-image {
-        width: 408px;
-        height: 480px;
+        display: flex;
+        width: 480px;
+        height: auto;
         padding: 16px 0 0 0;
-        text-align: right;
+       justify-content: end;
+        
       }
       .banner-image img {
         width: 384px;
         height: 480px;
       }
       .banner-text {
-        width: 535px;
         display: inline-block;
         color: white;
         padding: 0 0 0 32px;
@@ -162,14 +167,14 @@
     </style>
   </head>
   <body>
-    <header>
-      <ul class="list-container">
+    <header class="navigation-bar container white-space">
+      <ul>
         <li><a href="#" title="Home">Home</a></li>
         <li><a href="countries" title="Countries">Countries</a></li>
         <li><a href="#" title="Duration">Duration</a></li>
         <li><a href="#" title="Examples">Examples</a></li>
       </ul>
-      <div class="button-container">
+      <div class="button-container btn">
         <a href="#" title="get started" class="primary-button"> Get Started </a>
       </div>
     </header>
