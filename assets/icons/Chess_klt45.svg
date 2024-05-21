@@ -1,0 +1,7 @@
+<svg width="70" height="72" viewBox="0 0 70 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M35 13.26V2M30 6H40" stroke="black" stroke-width="1.5" stroke-linecap="round"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M34.9999 40C34.9999 40 43.9999 25 40.9999 19C40.9999 19 38.9999 14 34.9999 14C30.9999 14 28.9999 19 28.9999 19C25.9999 25 34.9999 40 34.9999 40Z" fill="white" stroke="black" stroke-width="1.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M14.9999 64C25.9999 71 43.9999 71 54.9999 64V50C54.9999 50 72.9999 41 66.9999 29C58.9999 16 39.9999 22 34.9999 37C29.9999 22 10.9999 16 2.99988 29C-3.00012 41 14.9999 50 14.9999 50V64Z" fill="white"/>
+<path d="M34.9999 37C39.9999 22 58.9999 16 66.9999 29C72.9999 41 54.9999 50 54.9999 50V64C43.9999 71 25.9999 71 14.9999 64V50C14.9999 50 -3.00012 41 2.99988 29C10.9999 16 29.9999 22 34.9999 37ZM34.9999 37V44" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15 50C26 44 44 44 55 50M15 57C26 51 44 51 55 57M15 64C26 58 44 58 55 64" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
