@@ -1,0 +1,146 @@
+@font-face {
+  font-family: kalameh;
+  src: url("../assets/fonts/KalamehFaNum-Regular.ttf");
+}
+@font-face {
+  font-family: kalameh-bold;
+  src: url("../assets/fonts/KalamehFaNum-Bold.ttf");
+}
+@font-face {
+  font-family: kalameh-extraBold;
+  src: url("../assets/fonts/KalamehFaNum-ExtraBold.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: kalameh-extraBold;
+}
+
+/* grid layout */
+.col-1 {
+  width: calc((100% / 12) * 1);
+}
+.col-2 {
+  width: calc((100% / 12) * 2);
+}
+.col-3 {
+  width: calc((100% / 12) * 3);
+}
+.col-4 {
+  width: calc((100% / 12) * 4);
+}
+.col-5 {
+  width: calc((100% / 12) * 5);
+}
+.col-6 {
+  width: calc((100% / 12) * 6);
+}
+.col-7 {
+  width: calc((100% / 12) * 7);
+}
+.col-8 {
+  width: calc((100% / 12) * 8);
+}
+.col-9 {
+  width: calc((100% / 12) * 9);
+}
+.col-10 {
+  width: calc((100% / 12) * 10);
+}
+.col-11 {
+  width: calc((100% / 12) * 11);
+}
+.col-12 {
+  width: calc((100% / 12) * 12);
+}
+
+.p-2 {
+  padding: 2px;
+}
+.p-4 {
+  padding: 4px;
+}
+.p-8 {
+  padding: 8px;
+}
+.p-16 {
+  padding: 16px;
+}
+.p-32 {
+  padding: 32px;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+}
+/* PROJECT CSS */
+
+body {
+    padding: 0;
+    margin: 0;
+  }
+  
+  footer section {
+    display: flex;
+    background-color: #346671;
+  }
+  footer div:nth-of-type(1) {
+    color: #000000;
+    font-size: 48px;
+  }
+  footer h2 {
+  }
+  
+
+
+.header {
+  /* background-image: url("../assets/images/tehran/city-under.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+ */
+
+  position: relative;
+  z-index: 0;
+  height: 808px;
+}
+
+.banner-container {
+  justify-content: center;
+}
+
+.header-container .text {
+  font-size: 90px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 1;
+  position: absolute;
+  height: 100%;
+  color: #fff;
+  padding-bottom: 175px;
+  line-height: 250px;
+}
+.header-container .text p {
+  font-family: kalameh;
+  word-spacing: 1rem;
+}
+
+.header-container img:nth-of-type(1) {
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.header-container img:nth-of-type(2) {
+  z-index: 2;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+
