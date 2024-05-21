@@ -9,7 +9,7 @@
 </head>
   <body>
     <main>
-      <section class="header-container">
+      <section class="header-container mb-64">
         <div class="row banner-container">
         <div class="text col-10">
           <h1>تهران</h1>
@@ -24,32 +24,36 @@
           />
         </div>
       </section>
-      <section class="architec">
-        <div>
-          <div>
-            <p><strong>۱۹‌امین</strong>سازهٔ بلند نامتکی جهان</p>
+      <section class="row architect-container my-64">
+        <div class="architect-row col-11">
+        <div class="right-container">
+            <div class="text-container ">
+            <p><strong>۱۹‌امین</strong> سازهٔ بلند نامتکی جهان</p>
             <p>
               برج مخابراتی میلاد با ارتفاع ۴۳۵ متر، در شمال غربی تهران واقع شده
               و بلندترین برج ایران است.
             </p>
+            </div>
+            <div class="image-container">
             <img
               src="../assets/images/tehran/miladtower.png"
               alt="milad-tower"
             />
-          </div>
         </div>
-        <div>
-          <div>
-            <h2 class="p-2">تهران،</h2>
-            <p>
-              شهری که قدمتش به بیش از هفت هزار سال پیش باز میگردد، توانسته خود
+        </div>
+        <div class="left-container">
+            <div class="text-container col-10">
+          <div class="innerText-container">
+            <h2>تهران، </h2>
+            <p >
+              شهری که قدمتش به بیش از هفت هزار سال  <br> پیش باز میگردد، توانسته خود
               را تبدیل به
             </p>
           </div>
-          <div>
-            <p>پایتختی با معماری</p>
+          <div >
+            <p class="text-90">پایتختی با معماری</p>
           </div>
-          <div>
+          <div class="innerText-container">
             <p>
               متفاوت در منطقه کند و تصویری جدید از ایران به دیگران ارائه دهد.
               تصویری جذاب و
@@ -57,27 +61,32 @@
             <h2>مدرن.</h2>
           </div>
         </div>
-        <div>
-          <a title="more-info" href="#">
-            <p>تهران‌گردی خودت رو الان رزرو کن!</p>
-            <img src="../assets/icons/tehran/arrow-right.svg" alt="more info"
-          /></a>
+        
+            <a title="more-info" href="#" class="button-container">
+              <p>تهران‌گردی خودت رو الان رزرو کن!</p>
+              <div><img src="../assets/icons/tehran/arrow-right.svg" alt="more info"> </div>
+            </a>
+         
+   
         </div>
+        
+      
+    </div>
       </section>
-      <section>
-        <div>
-          <div>
-            <h2>آخرین گردش‌ها</h2>
-            <a href="#" title="see-more-gatherings"> دیدن همه گردش‌ها </a>
+      <section class="mt-64 events">
+        <div class="events-container ">
+          <div class="col-5 text-container">
+            <h2>آخرین  <br> گردش‌ها</h2>
+            <a href="#" class="red-button " title="see-more-gatherings"> دیدن همه گردش‌ها </a>
           </div>
-          <div>
+          <div class="list-container col-5">
             <ul>
               <li>
-                <span>سری شماره ۱</span>
+                <span class="disabled-text">سری شماره ۱</span>
                 <div>
                   <div>
-                    <h2>۱۳ آبان ۱۴۰۱</h2>
-                    <p>پایان یافته</p>
+                    <h2 class="disabled-text">۱۳ آبان ۱۴۰۱</h2>
+                    <p class="disabled-text">پایان یافته</p>
                   </div>
                 </div>
               </li>
@@ -89,7 +98,7 @@
                     <p>۴ جای خالی</p>
                   </div>
                   <img
-                    src="../assets/icons/tehran/arrow-right.svg"
+                    src="../assets/icons/tehran/arrow-right-grey.svg"
                     alt="more info"
                   />
                 </div>
@@ -102,27 +111,32 @@
                     <p>۱۲ جای خالی</p>
                   </div>
                   <img
-                    src="../assets/icons/tehran/arrow-right.svg"
+                    src="../assets/icons/tehran/arrow-right-grey.svg"
                     alt="more info"
                   />
                 </div>
               </li>
             </ul>
-            <!-- <img src="../assets/images/tehran/mountains.png" alt="mountains" /> -->
           </div>
+
+
         </div>
+        <div class="image-container">
+        <img src="../assets/images/tehran/mountains.png" alt="mountains" />
+    </div>
       </section>
     </main>
-    <footer>
-      <section class="p-100">
-        <div>
+    <footer class="col-12">
+      <section class="row col-10 p-64">
+     
+        <div class="col-6">
           <h2>
             مکان هایی
             <br />
             که خواهیم دید
           </h2>
         </div>
-        <div>
+        <div class="col-6">
           <ol>
             <li>برج میلاد</li>
             <li>برج آزادی</li>
@@ -131,6 +145,7 @@
             <li>ساختمان ترمه</li>
           </ol>
         </div>
+    
       </section>
     </footer>
   </body>
