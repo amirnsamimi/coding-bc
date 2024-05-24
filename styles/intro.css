@@ -1,0 +1,145 @@
+:root {
+  --black: #101010;
+  --white: #fff;
+  color-scheme: light dark;
+  --defaultBlack: light-dark(var(--black), var(--white));
+  --defaultWhite: light-dark(var(--white), var(--black));
+}
+
+* {
+  font-family: montserrat;
+  scroll-behavior: smooth;
+}
+
+/* color schemes */
+
+.light {
+  color-scheme: light;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+/* main secttions */
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+footer {
+  background-color: var(--defaultBlack);
+  color: var(--white);
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.5rem;
+  font-weight: 100;
+}
+
+main {
+  padding: 2rem;
+}
+
+/*  global classes */
+
+.inner-title {
+  display: inline-flex;
+  align-items: center;
+}
+.inner-title :first-child {
+  padding-right: 10px;
+}
+
+.card-container {
+  gap: 20px;
+  display: flex;
+}
+.detail-card {
+  display: inline-block;
+  text-align: center;
+  max-width: 150px;
+  border: 1px solid var(--defaultBlack);
+  padding: 1rem;
+
+  box-shadow: 5px 5px 5px var(--defaultBlack);
+}
+
+.detail-card p {
+  font-weight: bold;
+}
+
+.download-button {
+  background-color: var(--defaultBlack);
+  text-decoration: none;
+  color: var(--defaultWhite);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 300px;
+  gap: 12px;
+  box-shadow: 5px 5px 5px var(--defaultBlack);
+}
+.download-button path {
+  fill: var(--defaultWhite);
+}
+/* navbar */
+
+nav {
+  background-color: var(--defaultBlack);
+  padding: 1rem;
+  box-shadow: 1px 1px 10px var(--black);
+  position: fixed;
+  width: 100%;
+}
+nav :where(ul, li) {
+  display: inline;
+}
+nav img {
+  max-width: 24px;
+}
+nav li {
+  text-align: center;
+  vertical-align: top;
+}
+
+nav a {
+  color: var(--defaultWhite);
+  text-decoration: none;
+}
+
+nav li:not(:last-child)::after {
+  content: " ";
+  width: 10px;
+  border-left: 1px solid var(--defaultWhite);
+  margin: 0 10px;
+}
+
+/* main page */
+section[id="profile-image"] {
+  margin-top: 4rem;
+  border-radius: 10px;
+  background-color: var(--black);
+  color: var(--defaultWhite);
+  padding: 2rem;
+  border: 1px solid var(--black);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section[id="profile-image"] h1 {
+  width: 100%;
+  padding: 1rem;
+  font-size: 2rem;
+  text-align: right;
+  text-wrap: balance;
+}
+section[id="profile-image"] :where(img) {
+  border-radius: 100%;
+  object-fit: cover;
+  max-width: 100px;
+  max-height: 100px;
+  box-shadow: 1px 1px 10px var(--defaultWhite);
+}
