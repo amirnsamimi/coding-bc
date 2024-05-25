@@ -238,7 +238,7 @@ main section{
     background-color: pink;
     grid-template-columns: repeat(12,1fr);
     grid-template-rows: repeat(12,1fr);
-    
+ 
    
 }
 .foo .buzz{
@@ -253,6 +253,14 @@ main section{
     grid-row: 12 span;
     border-radius: 0 50px 50px 50px;
     background-color: azure;
+}
+
+.foobooz{
+    background-color: white;
+    grid-column: 10 span ;
+    grid-row:  5 span;
+    border-radius: 0 50px 0 0 ;
+
 }
 .bar{
     background-color: blue;

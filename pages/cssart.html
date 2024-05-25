@@ -1,0 +1,220 @@
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      /* DON'T CHANGE THESE */
+      body {
+        font-family: "Open Sans", sans-serif;
+        font-size: 12px;
+        background-color: #ebebeb;
+        margin: 0;
+      }
+      .container {
+        width: 980px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .canvas {
+        width: 980px;
+        height: 500px;
+        border-radius: 16px;
+        margin-top: 100px;
+      }
+
+      /* Change Here */
+      .umbrella {
+        background-color: #fff4e4;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .back {
+        border: 2px solid #993045;
+        background-color: #ff4f73;
+        width: 390px;
+        height: 280px;
+        border-radius: 60%;
+        position: absolute;
+      }
+      .middle {
+        background-color: #ffc754;
+        border: 2px solid #be9238;
+        height: 280px;
+        width: 172px;
+        border-radius: 100%;
+        z-index: 1;
+      }
+      .bottom {
+        background-color: #fff4e4;
+        width: 395px;
+        height: 141px;
+        z-index: 2;
+        position: absolute;
+        bottom: 105px;
+      }
+
+      .small-part {
+        width: 110px;
+        height: 68px;
+        background-color: #fff4e4;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+
+        border: 2px solid #993045;
+      }
+
+      .right {
+        top: calc(50% - 20px);
+        left: calc((50% - 55px) - 141px);
+      }
+      .left {
+        top: calc(50% - 20px);
+        right: calc((50% - 55px) - 142px);
+      }
+
+      .big-part {
+        border: 2px solid #be9238;
+        width: 170px;
+        height: 60px;
+        background-color: #fff4e4;
+        border-radius: 50%;
+        position: absolute;
+        z-index: 1;
+        top: calc(50% - 20px);
+      }
+
+      .bar {
+        height: 169px;
+        width: 12px;
+        background-color: #9c6d6d;
+        z-index: 4;
+        position: absolute;
+        bottom: 100px;
+      }
+
+      /* Moon */
+      .moon {
+        background-color: #3b4a6b;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .moon-back {
+        background-color: #cbcbcb;
+        border-radius: 500px;
+        width: 250px;
+        height: 250px;
+        position: absolute;
+      }
+
+      .moon-surface {
+        background-color: #e3e5e1;
+        border-radius: 500px;
+        width: 227px;
+        height: 236px;
+        z-index: 1;
+        position: absolute;
+        left: calc((50% - 113.5px) - 11px);
+      }
+
+      .circle{
+        background-color: #898989;
+        z-index:3;
+        border-radius: 100px;
+      }
+
+      .moon-border{
+        border: 2px solid #656565;
+      }
+
+      .surface-circle-51 {
+        height: 51px;
+        width: 51px;
+      }
+
+      .surface-circle-44 {
+        height: 44px;
+        width: 44px;
+      }
+      .surface-circle-34 {
+        height: 34px;
+        width: 34px;
+      }
+      .surface-circle-25 {
+        height: 25px;
+        width: 25px;
+      }
+      .surface-circle-13 {
+        height: 13px;
+        width: 13px;
+      }
+
+      .position-1{
+        position: absolute;
+        top: calc(50% - 35.5px);
+        left: calc(50% + 25.5px);
+      }
+
+      .position-2{
+        position: absolute;
+        top: calc(50% + 25px);
+        left: calc(50% - 50px);
+      }
+
+      .position-3{
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 75px);
+      }
+
+      .position-4{
+        position: absolute;
+        top: calc(50% + 50px);
+        right: calc(50% - 95px);
+      }
+
+      .position-5{
+        position: absolute;
+        top: calc(50%);
+        left: calc(50% - 100px);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div class="canvas umbrella">
+        <!-- Change Here -->
+        <div class="back"></div>
+        <div class="middle"></div>
+        <div class="bottom"></div>
+        <div class="small-part right"></div>
+        <div class="small-part left"></div>
+        <div class="big-part"></div>
+        <div class="bar"></div>
+      </div>
+    </section>
+
+    <section class="container">
+      <div class="moon canvas">
+        <!-- Change Here -->
+        <div class="moon-back"></div>
+        <div class="moon-surface"></div>
+        <div class="surface-circle-51 moon-border circle position-1"></div>
+        <div class="surface-circle-44 moon-border circle position-2" ></div>
+        <div class="surface-circle-34  circle position-3"></div>
+        <div class="surface-circle-25  circle position-4"></div>
+        <div class="surface-circle-13  circle position-5"></div>
+      </div>
+    </section>
+  </body>
+</html>
