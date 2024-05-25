@@ -30,8 +30,20 @@
         --white: #ffffff;
         --fade-black: #000000aa;
         --fade-white: #ffffffaa;
-        --ice-orage: #f4b10d;
+        --ice-orange: #f4b10d;
         --ice-green: #346e16;
+        --glowing-green: rgb(114, 255, 114);
+        --status-green: rgb(9, 177, 9);
+        /*chat cart */
+        --darkBlue: #4072ec;
+        --lightBlue: #54b2d0;
+        --skyblue: #f1f5f8;
+        --user-blue: #edf1f4;
+        --responder-blue: linear-gradient(
+          90deg,
+          var(--darkBlue),
+          var(--lightBlue)
+        );
       }
 
       * {
@@ -91,8 +103,7 @@
         font-weight: 500;
       }
 
-
-      /* grid system */ 
+      /* grid system */
 
       .col-4 {
         width: calc((100% / 12) * 4);
@@ -106,7 +117,6 @@
         justify-content: center;
       }
 
-      
       .container {
         width: 1200px;
         position: relative;
@@ -181,7 +191,7 @@
       .lemon {
         opacity: 1;
         display: block;
-        background-color: var(--ice-orage);
+        background-color: var(--ice-orange);
         height: 500px;
         width: 500px;
 
@@ -302,7 +312,6 @@
         border-radius: 90px;
       }
 
-
       .flavors li {
         margin: 30px 0;
       }
@@ -310,9 +319,7 @@
       /* ice donkey sellers */
 
       .sellers {
-
         margin-bottom: 100px;
-
       }
       .sellers h2 {
         text-align: center;
@@ -332,11 +339,266 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        color: var(--black);
+        text-decoration: none;
       }
 
+      /* HELP DESK */
 
+      /*help desk css art */
 
+      .helpDesk-canvas {
+        opacity: 1;
+        height: 60px;
+        width: 60px;
+        position: relative;
+        border: none;
+        background-color: var(--default-bg);
+        outline: none;
+        transition: 1s;
+      }
 
+      
+
+      .helpDesk-canvas-circle {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+        top: 0;
+        height: 40px;
+        width: 40px;
+        background-color: var(--ice-orange);
+        border-radius: 40px;
+      }
+
+      .helpDesk-canvas-triangle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-bottom: 10px solid transparent;
+        border-top: 10px solid transparent;
+        border-left: 10px solid var(--ice-orange);
+        border-right: 10px solid transparent;
+        transform: rotate(40deg) translate(-45%, 20%);
+        top: 50%;
+      }
+
+      /* help desk css */
+
+      .helpDesk {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+      }
+
+      .helpDesk-chat {
+        visibility: hidden;
+        transition: 1s all;
+        opacity: 0;
+        height: 564px;
+        width: 400px;
+        bottom: 60px;
+        right: 60px;
+        background-color: var(--white);
+        position: absolute;
+        border-radius: 25px 25px 5px 25px;
+      }
+
+      .helpDesk-header {
+        background: var(--responder-blue);
+        height: 100px;
+        border-radius: 25px 25px 0 0;
+      }
+
+      .helpDesk-header-controllers {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 32px;
+      }
+      .helpDesk-header-controllers img {
+        height: 16px;
+        width: 16px;
+        filter: invert();
+      }
+      .helpDesk-header-controllers div {
+        display: flex;
+        gap: 10px;
+      }
+
+      .helpDesk-header-fullScreen {
+        transform: rotate(45deg);
+      }
+
+      .helpDesk-header-user {
+        display: flex;
+        padding: 0 32px;
+        gap: 20px;
+        color: var(--white);
+      }
+
+      .helpDesk-header-user img {
+        height: 40px;
+        border-radius: 40px;
+      }
+
+      .helpDesk-header-user h2 {
+        font-size: 16px;
+      }
+
+      .helpDesk-header-user .helpDesk-header-status {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .helpDesk-header-user p {
+        font-size: 10px;
+        font-weight: 300;
+        color: var(--fade-white);
+      }
+      .helpDesk-header-user p::before {
+        content: "";
+        height: 8px;
+        width: 8px;
+        display: block;
+        background-color: var(--status-green);
+        border-radius: 10px;
+        box-shadow: 0 0 5px var(--glowing-green);
+      }
+      /* help desk body */
+
+      .helpDesk-body {
+        background-color: var(--white);
+        padding: 32px;
+        width: 100%;
+      }
+
+      .helpDesk-body ul {
+        display: flex;
+        flex-direction: column-reverse;
+        list-style-type: none;
+        overflow: auto;
+        height: 300px;
+      }
+
+      ::-webkit-scrollbar {
+        display: none;
+      }
+
+      .helpDesk-body li {
+        display: flex;
+        align-items: flex-end;
+        gap: 10px;
+        margin: 15px 0;
+      }
+
+      .helpDesk-userChat-cart {
+        background-color: var(--skyblue);
+        padding: 16px;
+        border-radius: 20px;
+      }
+
+      .helpDesk-userChat-userImage {
+        display: flex;
+        align-items: flex-end;
+        height: 16px;
+        width: 16px;
+        padding: 6px;
+        border-radius: 20px;
+        box-sizing: content-box;
+        background-color: var(--user-blue);
+      }
+
+      .helpDesk-responderChat-cart {
+        width: max-content;
+        padding: 8px 16px;
+        border-radius: 100px;
+        color: var(--white);
+        background: var(--responder-blue);
+      }
+
+      .helpDesk-responderChat-options {
+        display: flex;
+        width: 100%;
+      }
+      .helpDesk-responderChat-options button {
+        display: flex;
+
+        padding: 8px 16px;
+        border-radius: 100px;
+        background-color: transparent;
+        color: var(--black);
+        align-items: center;
+        border: 2px solid var(--darkBlue);
+        gap: 6px;
+      }
+
+      .helpDesk-responderChat-options img {
+        width: max-content;
+        width: 16px;
+        height: 16px;
+        box-sizing: content-box;
+      }
+
+      .helpDesk-footer {
+        padding: 0 32px;
+        height: 100px;
+      }
+      .helpDesk-footer form {
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+      }
+      .helpDesk-footer img {
+        height: 16px;
+        width: 16px;
+      }
+
+      .helpDesk-footer-input {
+        display: flex;
+        position: relative;
+        width: 100%;
+        align-items: center;
+      }
+      .helpDesk-footer-input input {
+        border: none;
+
+        background-color: var(--user-blue);
+        padding: 16px 32px;
+        border-radius: 100px;
+        width: 100%;
+      }
+
+      .helpDesk-footer-input img {
+        position: absolute;
+        left: 8px;
+      }
+
+      .helpDesk-footer-send {
+        background: var(--responder-blue);
+        transform: rotateY(180deg);
+        width: 70px;
+        border: none;
+        border-radius: 53px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .helpDesk-footer-send img {
+        filter: invert();
+      }
+      .footer-note {
+        font-size: 8px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 16px;
+      }
     </style>
   </head>
   <body>
@@ -353,6 +615,125 @@
       </nav>
     </header>
     <main>
+      <div class="helpDesk">
+        <button class="helpDesk-canvas">
+          <div class="helpDesk-canvas-circle">
+            <img
+              id="helpDesk-canvas-img"
+              src="../assets/icons/chatbox/group.svg"
+              alt="chat"
+              width="16px"
+            />
+          </div>
+          <div class="helpDesk-canvas-triangle"></div>
+        </button>
+        <div class="helpDesk-chat">
+          <div class="helpDesk-header">
+            <div class="helpDesk-header-controllers">
+              <div>
+                <img src="../assets/icons/chatbox/close.svg" alt="close" /><img
+                  src="../assets/icons/chatbox/arrow-down.svg"
+                  alt="down"
+                /><img src="../assets/icons/chatbox/other.svg" alt="other" />
+              </div>
+              <div class="helpDesk-header-fullScreen">
+                <img
+                  src="../assets/icons/chatbox/fullScreen.svg"
+                  alt="fullScreen"
+                />
+              </div>
+            </div>
+            <div class="helpDesk-header-user">
+              <img src="../assets/images/userimage.jpeg" alt="user" />
+              <div>
+                <h2>نیاز به کمک دارید؟</h2>
+                <p class="helpDesk-header-status">ما به سرعت پاسخ می دهیم</p>
+              </div>
+            </div>
+          </div>
+          <div class="helpDesk-body">
+            <ul>
+              <li class="helpDesk-responderChat-cart">
+                <div>Lorem ipsum dolor sit</div>
+              </li>
+              <li>
+                <div>
+                  <img
+                    src="../assets/icons/chatbox/user.svg"
+                    alt="user-icon"
+                    class="helpDesk-userChat-userImage"
+                  />
+                </div>
+                <div class="helpDesk-userChat-cart">
+                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Amet
+                  in molestiae vero minus laborum recusandae porro! Odio sint
+                  cupiditate mollitia.
+                </div>
+              </li>
+              <li class="helpDesk-responderChat-cart">
+                <div>Lorem ipsum dolor sit</div>
+              </li>
+              <li>
+                <div>
+                  <img
+                    src="../assets/icons/chatbox/user.svg"
+                    alt="user-icon"
+                    class="helpDesk-userChat-userImage"
+                  />
+                </div>
+                <div class="helpDesk-userChat-cart">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat quasi sit ea consequatur cumque, nam vero, accusamus,
+                  tenetur dicta officia incidunt iste eligendi numquam
+                  asperiores eum? Eligendi fugiat beatae sint.
+                </div>
+              </li>
+              <li class="helpDesk-responderChat-options">
+                <button>
+                  <img src="../assets/icons/chatbox/woman.svg" alt="man" />
+                  <span>For Him</span>
+                </button>
+                <button>
+                  <img src="../assets/icons/chatbox/man.svg" alt="woman" />
+                  <span>For Her</span>
+                </button>
+              </li>
+              <li>
+                <div>
+                  <img
+                    src="../assets/icons/chatbox/user.svg"
+                    alt="user-icon"
+                    class="helpDesk-userChat-userImage"
+                  />
+                </div>
+                <div class="helpDesk-userChat-cart">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Placeat quasi sit ea consequatur cumque, nam vero, accusamus,
+                  tenetur dicta officia incidunt iste eligendi numquam
+                  asperiores eum? Eligendi fugiat beatae sint.
+                </div>
+              </li>
+              <li class="helpDesk-responderChat-cart">
+                <div>Lorem ipsum dolor sit</div>
+              </li>
+            </ul>
+          </div>
+          <div class="helpDesk-footer">
+            <form action="#">
+              <div class="helpDesk-footer-input">
+                <input
+                  type="text"
+                  placeholder="پیغام خود را یادداشت کنید..."
+                /><img src="../assets/icons/chatbox/emoji.svg" alt="send" />
+              </div>
+              <button class="helpDesk-footer-send">
+                <img src="../assets/icons/chatbox/send.svg" alt="send" />
+              </button>
+            </form>
+            <div class="footer-note">قدرت گرقته از امیر صمیمی</div>
+          </div>
+        </div>
+      </div>
       <section class="hero">
         <div class="right-info">
           <p>هر روز، آبمیوه تازه</p>
@@ -509,10 +890,9 @@
       <section class="sellers">
         <h2>فروشنده‌های آیسی دانکی</h2>
         <div class="container">
-
           <ul class="row">
             <li class="flex justify-center col-4">
-              <div class="seller-cart">
+              <a href="#" title="to-seller" class="seller-cart">
                 <div class="">
                   <img
                     src="../assets/logos/iceDonkey/shahrvand.svg"
@@ -522,10 +902,10 @@
                 <div>
                   <h3>فروشگاه‌های زنجیره‌ای شهروند</h3>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="flex justify-center col-4">
-              <div class="seller-cart">
+              <a href="#" title="to-seller" class="seller-cart">
                 <div class="">
                   <img
                     src="../assets/logos/iceDonkey/ofoghkoroush.svg"
@@ -535,10 +915,10 @@
                 <div>
                   <h3>فروشگاه‌های زنجیره‌ای افق کوروش</h3>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="flex justify-center col-4">
-              <div class="seller-cart">
+              <a href="#" title="to-seller" class="seller-cart">
                 <div class="">
                   <img
                     src="../assets/logos/iceDonkey/hyperstar.svg"
@@ -548,10 +928,10 @@
                 <div>
                   <h3>فروشگاه‌های زنجیره‌ای هایپراستار</h3>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="flex justify-center col-4">
-              <div class="seller-cart">
+              <a href="#" title="to-seller" class="seller-cart">
                 <div class="">
                   <img
                     src="../assets/logos/iceDonkey/digikala.svg"
@@ -561,10 +941,10 @@
                 <div>
                   <h3>فروشگاه‌ اینترنتی دیجیکالا</h3>
                 </div>
-              </div>
+              </a>
             </li>
             <li class="flex justify-center col-4">
-              <div class="seller-cart">
+              <a href="#" title="to-seller" class="seller-cart">
                 <div>
                   <img
                     src="../assets/logos/iceDonkey/snappmarket.svg"
@@ -574,12 +954,64 @@
                 <div>
                   <h3>فروشگاه‌ اینترنتی اسنپ‌مارکت</h3>
                 </div>
-              </div>
+              </a>
             </li>
           </ul>
         </div>
       </section>
     </main>
     <footer>© تمام حقوق محفوظ است</footer>
+    <script>
+      let open = false;
+      document.querySelector("button").addEventListener("click", (e) => {
+        if (open) {
+          document.getElementsByClassName(
+            "helpDesk-canvas"
+          )[0].style.transform = "rotate(0deg)";
+
+          document.getElementsByClassName(
+            "helpDesk-canvas-circle"
+          )[0].style.backgroundColor = "var(--ice-orange)";
+          document.getElementsByClassName(
+            "helpDesk-canvas-triangle"
+          )[0].style.borderLeft = "10px solid var(--ice-orange)";
+          document
+            .getElementById("helpDesk-canvas-img")
+            .setAttribute("src", "../assets/icons/chatbox/group.svg");
+
+          open = false;
+          setTimeout(() => {
+            document.getElementsByClassName(
+              "helpDesk-chat"
+            )[0].style.visibility = "hidden";
+            document.getElementsByClassName("helpDesk-chat")[0].style.opacity =
+              "0";
+          }, 500);
+        } else {
+          document.getElementsByClassName(
+            "helpDesk-canvas"
+          )[0].style.transform = "rotate(180deg) translate(50%,50%)";
+
+          document.getElementsByClassName(
+            "helpDesk-canvas-circle"
+          )[0].style.backgroundColor = "var(--white)";
+          document.getElementsByClassName(
+            "helpDesk-canvas-triangle"
+          )[0].style.borderLeft = "10px solid var(--white)";
+
+          document
+            .getElementById("helpDesk-canvas-img")
+            .setAttribute("src", "../assets/icons/chatbox/close.svg");
+          open = true;
+          setTimeout(() => {
+            document.getElementsByClassName(
+              "helpDesk-chat"
+            )[0].style.visibility = "visible";
+            document.getElementsByClassName("helpDesk-chat")[0].style.opacity =
+              "1";
+          }, 500);
+        }
+      });
+    </script>
   </body>
 </html>
