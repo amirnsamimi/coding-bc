@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Help Desk</title>
+    <style>
+      :root {
+        --radial-bg: radial-gradient(ellipse at bottom, #d2d2d2, #797979);
+
+        --red: red;
+        --purple: purple;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        height: 100dvh;
+        background: var(--radial-bg);
+      }
+
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      li {
+        padding: 10px;
+      }
+      .chat {
+        width: 185px;
+        height: 394px;
+        position: fixed;
+        right: 100px;
+        bottom: 70px;
+        background-color: var(--red);
+        border-radius: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .chat-header {
+        width: 100%;
+        height: 50px;
+        background-color: var(--purple);
+        border-radius: 20px 20px 0 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .chat-footer {
+        background-color: pink;
+        height: 50px;
+        border-radius: 0 0 20px 20px;
+        z-index: 10;
+      }
+
+      .chat-body {
+        background-color: palegoldenrod;
+        height: 294px;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column-reverse;
+        overflow: auto;
+        height: 294px;
+      }
+      .icon {
+        height: 16px;
+        width: 16px;
+      }
+
+      .px-40 {
+        padding: 0 20px;
+      }
+
+      ::-webkit-scrollbar {
+        background-color: pink;
+      }
+      ::-webkit-scrollbar-track {
+        background-color: #797979;
+      }
+
+      ::-webkit-scrollbar-thumb {
+        background-color: aqua;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat">
+      <div class="chat-header px-40">
+        <div>
+        <div>logo</div>
+        <img
+          src="../assets/icons/chatbox/arrow-down.svg"
+          class="icon"
+          alt="arrow_down"
+        />
+        </div>
+        <div>
+
+        </div>
+      </div>
+      <div class="chat-body">
+        <ul>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
+          <li>4</li>
+          <li>5</li>
+          <li>6</li>
+          <li>7</li>
+          <li>8</li>
+          <li>9</li>
+          <li>10</li>
+          <li>11</li>
+          <li>12</li>
+          <li>13</li>
+          <li>14</li>
+          <li>15</li>
+          <li>16</li>
+          <li>17</li>
+          <li>18</li>
+          <li>19</li>
+          <li>20</li>
+        </ul>
+      </div>
+      <div class="chat-footer"></div>
+    </div>
+  </body>
+</html>

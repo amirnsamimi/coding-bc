@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lalezar&family=Vazirmatn:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lalezar&display=swap"
+      rel="stylesheet"
+    />
+    <title>ICE DONKEY</title>
+    <style>
+      :root {
+        --body-maxWidth: 1440px;
+        --primary-font: Vazirmatn;
+        --secondary-font: Lalezar;
+
+        /*Backgrounds*/
+        --default-bg: #e6eaeb;
+
+        /*Colors*/
+        --black: #040202;
+        --white: #ffffff;
+        --fade-black: #000000aa;
+        --fade-white: #ffffffaa;
+        --ice-orage: #f4b10d;
+        --ice-green: #346e16;
+      }
+
+      * {
+        font-family: var(--primary-font);
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      html {
+        display: flex;
+        justify-content: center;
+      }
+      body {
+        width: var(--body-maxWidth);
+        padding: 0 120px;
+        background-color: var(--default-bg);
+      }
+
+      footer {
+        padding: 32px 0;
+        text-align: center;
+      }
+
+      .btn-primary {
+        background-color: var(--black);
+        padding: 16px 32px;
+        font-size: 18px;
+        border-radius: 100px;
+        display: flex;
+        width: max-content;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: white;
+        text-decoration: none;
+      }
+
+      /*header */
+
+      header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 19.5px 0;
+      }
+
+      header ul {
+        display: flex;
+        list-style: none;
+        gap: 20px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--black);
+        font-weight: 500;
+      }
+
+
+      /* grid system */ 
+
+      .col-4 {
+        width: calc((100% / 12) * 4);
+      }
+
+      .flex {
+        display: flex;
+      }
+
+      .justify-center {
+        justify-content: center;
+      }
+
+      
+      .container {
+        width: 1200px;
+        position: relative;
+      }
+
+      .row {
+        display: flex;
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      /* main */
+
+      .hero {
+        position: relative;
+        width: 100%;
+        height: 590px;
+        margin: 65px 0;
+      }
+
+      .hero ul {
+        gap: 40px;
+      }
+      .banner {
+        position: relative;
+        height: 100%;
+      }
+
+      .banner h1 {
+        text-align: center;
+        line-height: 300px;
+        font-size: 300px;
+        color: var(--ice-green);
+        font-family: var(--secondary-font);
+        z-index: 3;
+        font-weight: 500;
+      }
+
+      .abs-center {
+        position: absolute;
+        right: 50%;
+
+        transform: translateX(50%);
+      }
+
+      .kiwi {
+        z-index: 5;
+        top: 325px;
+        transform: translateX(125px);
+      }
+      .lemon-wedge {
+        z-index: 5;
+        top: 225px;
+        transform: translateX(145px);
+      }
+      .bottle {
+        z-index: 4;
+        transform: translateX(50px);
+      }
+      .mint {
+        z-index: 4;
+        transform: translateX(-85px);
+        top: 145px;
+      }
+      .lime {
+        z-index: 2;
+        transform: translateX(-40px);
+        top: 185px;
+      }
+
+      .lemon {
+        opacity: 1;
+        display: block;
+        background-color: var(--ice-orage);
+        height: 500px;
+        width: 500px;
+
+        border-radius: 500px;
+        position: absolute;
+        transform: translateX(175px);
+        bottom: 0;
+      }
+      .lemon img {
+        opacity: 0.6;
+        transform: translateX(-20px) translateY(10px);
+        bottom: 0;
+      }
+
+      .right-info {
+        position: absolute;
+        font-size: 28px;
+        color: var(--fade-black);
+        height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        bottom: 100px;
+      }
+
+      .left-info {
+        position: absolute;
+        font-size: 12px;
+        color: var(--black);
+        height: 225px;
+        width: 250px;
+        bottom: 40px;
+        left: 0;
+      }
+
+      .left-info ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 100%;
+      }
+
+      .left-info li {
+        display: flex;
+        gap: 20px;
+        text-overflow: clip;
+        width: 100%;
+      }
+      .left-info p {
+        color: var(--fade-black);
+      }
+
+      .left-info .icons-black {
+        background-color: var(--black);
+        padding: 16px;
+        border-radius: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* ice donkey Flavors */
+
+      .flavors {
+        margin-top: 160px;
+        height: 710px;
+      }
+
+      .flavors h2 {
+        text-align: center;
+        font-size: 48px;
+        font-family: var(--secondary-font);
+        margin-bottom: 24px;
+      }
+
+      .flavors h3 {
+        color: var(--white);
+      }
+
+      .flavors p {
+        color: var(--fade-white);
+      }
+
+      .flavor-cart {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+      .flavor-cart:nth-of-type(1) {
+        gap: 12px;
+      }
+
+      .flavor-cart:nth-child(2) div {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .icons-green {
+        background-color: var(--ice-green);
+        width: 150px;
+        height: 150px;
+        border-radius: 200px;
+        text-align: center;
+      }
+
+      .flavor-bg {
+        position: absolute;
+        z-index: -1;
+        width: 100%;
+        bottom: 0;
+        background-color: var(--black);
+        height: 540px;
+        border-radius: 90px;
+      }
+
+
+      .flavors li {
+        margin: 30px 0;
+      }
+
+      /* ice donkey sellers */
+
+      .sellers {
+
+        margin-bottom: 100px;
+
+      }
+      .sellers h2 {
+        text-align: center;
+        font-size: 48px;
+        font-family: var(--secondary-font);
+        margin-bottom: 50px;
+        margin-top: 160px;
+      }
+      .sellers li {
+        margin: 25px 0;
+      }
+
+      .seller-cart {
+        width: 250px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+      }
+
+
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <a href="/" title="go backhome">
+        <img src="../assets/logos/iceDonkey/Logo.svg" alt="iceDonkey-logo"
+      /></a>
+      <nav>
+        <ul>
+          <li><a href="/" alt="to-home">خانه</a></li>
+          <li><a href="#" alt="to-flavors">طعم‌ها</a></li>
+          <li><a href="#" alt="to-shop">فروشگاه‌ها</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="right-info">
+          <p>هر روز، آبمیوه تازه</p>
+          <a href="#" title="shop-now" class="btn-primary"
+            ><img
+              src="../assets/icons/iceDonkey/cart.svg"
+              alt="shopping-cart"
+            />همین الان بخر</a
+          >
+        </div>
+        <div class="banner">
+          <h1 class="abs-center">آیسی&nbsp;دانکی</h1>
+          <img
+            src="../assets/images/iceDonkey/kiwi.svg"
+            alt="kiwi"
+            class="abs-center kiwi"
+          />
+          <img
+            src="../assets/images/iceDonkey/mint.svg"
+            alt="mint"
+            class="abs-center mint"
+          />
+          <img
+            src="../assets/images/iceDonkey/lime.svg"
+            alt="lime"
+            class="abs-center lime"
+          />
+          <img
+            src="../assets/images/iceDonkey/lemon_wedge.svg"
+            alt="lemon_wedge"
+            class="abs-center lemon-wedge"
+          />
+          <div class="abs-center lemon">
+            <img src="../assets/images/iceDonkey/lemon.svg" alt="lemon" />
+          </div>
+          <img
+            src="../assets/images/iceDonkey/bottle.svg"
+            alt="bottle"
+            class="abs-center bottle"
+          />
+        </div>
+        <div class="left-info">
+          <ul>
+            <li>
+              <div class="icons-black">
+                <img src="../assets/icons/iceDonkey/pills.svg" alt="pills" />
+              </div>
+              <div>
+                <h2>ویتامین</h2>
+                <p>میزان مصرف ویتامین توی رژیم غذاییت رو افزایش بده</p>
+              </div>
+            </li>
+            <li>
+              <div class="icons-black">
+                <img src="../assets/icons/iceDonkey/weight.svg" alt="weight" />
+              </div>
+              <div>
+                <h2>کاهش وزن</h2>
+                <p>با کم کردن مقدار شکر ورودی وزنت رو کم بکن</p>
+              </div>
+            </li>
+            <li>
+              <div class="icons-black">
+                <img src="../assets/icons/iceDonkey/muscle.svg" alt="muscle" />
+              </div>
+              <div>
+                <h2>محافظت</h2>
+                <p>از الان جلوی پوکی استخوان در کهن‌سالیت رو بگیر</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="flavors">
+        <h2>طعم‌های آیسی دانکی</h2>
+        <div class="container">
+          <div class="flavor-bg"></div>
+          <ul class="row">
+            <li class="flex justify-center col-4">
+              <div class="flavor-cart">
+                <div class="icons-green">
+                  <img
+                    src="../assets/icons/iceDonkey/watermelon.svg"
+                    alt="watermelon"
+                  />
+                </div>
+                <div>
+                  <h3>هندوانه</h3>
+                  <p>آب هنداونه‌ی تازه، بدون پوست و هسته و شکر افزوده</p>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="flavor-cart">
+                <div class="icons-green">
+                  <img src="../assets/icons/iceDonkey/melon.svg" alt="melon" />
+                </div>
+                <div>
+                  <h3>هانی ملون</h3>
+                  <p>آب هانی ملون تازه، بدون پوست و هسته و شکر افزوده</p>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="flavor-cart">
+                <div class="icons-green">
+                  <img src="../assets/icons/iceDonkey/lime.svg" alt="lime" />
+                </div>
+                <div>
+                  <h3>لیمو عسل</h3>
+                  <p>ترکیب آب لیمو‌ی سنگی تازه به همراه عسل و آب گاز‌دار</p>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="flavor-cart">
+                <div class="icons-green">
+                  <img src="../assets/icons/iceDonkey/kiwi.svg" alt="kiwi" />
+                </div>
+                <div>
+                  <h3>کیوی</h3>
+                  <p>ترکیب کیوی تازه‌ی پوره‌شده به همراه آب گازدار</p>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="flavor-cart">
+                <div class="icons-green">
+                  <img
+                    src="../assets/icons/iceDonkey/pomegranate.svg"
+                    alt="pomegranate"
+                  />
+                </div>
+                <div>
+                  <h3>انار</h3>
+                  <p>آب انار ترش و شیرین، بدون هسته‌ی گس و شکر یا نمک افزوده</p>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="flavor-cart">
+                <div class="icons-green">
+                  <img src="../assets/icons/iceDonkey/peach.svg" alt="peach" />
+                </div>
+                <div>
+                  <h3>هلو</h3>
+                  <p>آب هلوی تازه، بدون پوست، پالپ و شکر افزوده</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="sellers">
+        <h2>فروشنده‌های آیسی دانکی</h2>
+        <div class="container">
+
+          <ul class="row">
+            <li class="flex justify-center col-4">
+              <div class="seller-cart">
+                <div class="">
+                  <img
+                    src="../assets/logos/iceDonkey/shahrvand.svg"
+                    alt="shahrvand"
+                  />
+                </div>
+                <div>
+                  <h3>فروشگاه‌های زنجیره‌ای شهروند</h3>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="seller-cart">
+                <div class="">
+                  <img
+                    src="../assets/logos/iceDonkey/ofoghkoroush.svg"
+                    alt="ofoghkoroush"
+                  />
+                </div>
+                <div>
+                  <h3>فروشگاه‌های زنجیره‌ای افق کوروش</h3>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="seller-cart">
+                <div class="">
+                  <img
+                    src="../assets/logos/iceDonkey/hyperstar.svg"
+                    alt="hyperstar"
+                  />
+                </div>
+                <div>
+                  <h3>فروشگاه‌های زنجیره‌ای هایپراستار</h3>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="seller-cart">
+                <div class="">
+                  <img
+                    src="../assets/logos/iceDonkey/digikala.svg"
+                    alt="digikala"
+                  />
+                </div>
+                <div>
+                  <h3>فروشگاه‌ اینترنتی دیجیکالا</h3>
+                </div>
+              </div>
+            </li>
+            <li class="flex justify-center col-4">
+              <div class="seller-cart">
+                <div>
+                  <img
+                    src="../assets/logos/iceDonkey/snappmarket.svg"
+                    alt="snappmarket"
+                  />
+                </div>
+                <div>
+                  <h3>فروشگاه‌ اینترنتی اسنپ‌مارکت</h3>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+    <footer>© تمام حقوق محفوظ است</footer>
+  </body>
+</html>
