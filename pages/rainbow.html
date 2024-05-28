@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      body {
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+      }
+
+      div {
+        position: absolute;
+        bottom: 50%;
+        transform: translateY(50%);
+        right: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vw;
+        border-radius: 3000px;
+        margin: 0 auto;
+      }
+
+      
+
+      div:nth-of-type(1) {
+        background-color: rgba(255, 0, 0, 0.5);
+        box-shadow: 0 0 50px red;
+      }
+
+      div:nth-of-type(2) {
+        background-color: rgba(255, 166, 0, 0.5);
+        width: 95vw;
+        height: 95vw;
+        z-index: 1;
+        box-shadow: 0 0 50px orange;
+      }
+
+      div:nth-of-type(3) {
+        background-color: rgba(255, 255, 0, 0.5);
+        width: 90vw;
+        height: 90vw;
+        z-index: 1;
+        box-shadow: 0 0 50px yellow;
+      }
+
+      div:nth-of-type(4) {
+        background-color: rgba(0, 128, 0, 0.5);
+        width: 85vw;
+        height: 85vw;
+        z-index: 1;
+        box-shadow: 0 0 50px green;
+      }
+
+      div:nth-of-type(5) {
+        background-color: rgba(135, 207, 235, 0.5);
+        width: 80vw;
+        height: 80vw;
+        z-index: 1;
+        box-shadow: 0 0 50px skyblue;
+      }
+
+      div:nth-of-type(6) {
+        background-color: rgba(0, 0, 255, 0.5);
+        width: 75vw;
+        height: 75vw;
+        z-index: 1;
+        box-shadow: 0 0 50px blue;
+      }
+
+      div:nth-of-type(7) {
+        background-color: rgba(128, 0, 128, 0.5);
+        width: 70vw;
+        height: 70vw;
+        z-index: 1;
+        box-shadow: 0 0 50px purple;
+      }
+      div:nth-of-type(8) {
+        background-color: white;
+        width: 65vw;
+        height: 65vw;
+        z-index: 1;
+        box-shadow: 0 0 10px 10px white;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>
