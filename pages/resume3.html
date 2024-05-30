@@ -167,31 +167,30 @@
 
       .skills-rate-active::before {
         content: "";
-        width: 10px;
         height: 10px;
-        border-radius: 100px;
+        display: flex;
+        align-items: center;
         background-color: var(--dark-gray);
-        display: block;
       }
 
       .skills-rate-disabled::before {
+        display: flex;
+        align-items: center;
         content: "";
-        width: 10px;
         height: 10px;
-        border-radius: 100px;
+
         background-color: var(--mid-gray);
-        display: block;
       }
       /* header */
 
-      h1 {
+      .top-div {
         position: absolute;
-        text-align: center;
-        font-size: 16px;
-        font-weight: 200;
-        color: var(--mid-gray);
-        word-spacing: 5px;
-        padding: 90px 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: var(--gray);
+        height: 450px;
+        z-index: -1;
       }
 
       /* main */
@@ -202,17 +201,18 @@
         display: grid;
         justify-content: flex-end;
         align-content: flex-start;
-        padding-top: 180px;
+        padding-top: 90px;
+        position: relative;
       }
 
       .right {
         width: 50%;
         min-height: 100vh;
         padding: 0 50px;
-        background-color: var(--gray);
+
         display: grid;
         align-content: flex-start;
-        padding-top: 180px;
+        padding-top: 90px;
         justify-content: flex-start;
       }
       .main-container {
@@ -241,6 +241,11 @@
         width: 350px;
       }
 
+      /* w-350 */
+      .w-350 {
+        width: 350px;
+      }
+
       /* INTEREST */
 
       .interests ul {
@@ -259,24 +264,39 @@
       }
 
       /* socials, name, lastname */
+      .user-detail {
+        height: 270px;
+        display: flex;
+        
+        flex-direction: column;
+        justify-content: space-between;
+      }
+
+      .row-name {
+        display: flex;
+        flex-direction: column;
+      }
+      .row-name div {
+        display: flex;
+        gap: 10px;
+      }
 
       .fName-lName {
         color: var(--dark-gray);
-        font-size: 72px;
+        font-size: 40px;
         line-height: 1;
       }
       .fName-lName:first-child {
-        font-size: 64px;
+        font-size: 40px;
         font-weight: 200;
         line-height: 1;
       }
 
       .job-position {
-        background-color: var(--dark-gray);
         font-size: 18px;
-        padding: 4px 16px;
-        color: var(--gray);
-        font-weight: 300;
+        padding: 4px 0;
+        color: var(--dark-gray);
+        font-weight: 600;
         text-align: center;
         width: max-content;
       }
@@ -296,52 +316,147 @@
       .skills-list {
         display: flex;
         justify-content: space-between;
-        width: 250px;
+        width: 350px;
         margin: 12px 0;
         align-items: center;
       }
 
       .skills-rate {
         display: flex;
-        gap: 4px;
+        align-items: center;
       }
 
       .skills h3 {
         font-size: 14px;
         font-weight: 400;
       }
+      .call-info {
+        display: grid;
+        row-gap: 10px;
+        color: var(--mid-gray);
+      }
+
+
+      .greetings{
+        font-size: 110px;
+        font-weight: 900;
+        position: absolute;
+        left:calc(50% - 625px);
+        transform: rotate(-90deg);
+        top:400px;
+        text-align: center;
+      }
     </style>
   </head>
   <body>
-    <header class="container">
-      <h1>
-        <strong>Call</strong> (+98) 912 497 1667 or
-        <strong>Email</strong> amirnsamimi@gmail.com
-      </h1>
-    </header>
     <main>
+        <div class="greetings">Hello,</div>
+      <div class="top-div"></div>
       <div class="main-container">
         <div class="left">
-          <section class="row mb-25">
-            <svg
-              class="icon gray"
-              width="800px"
-              height="800px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M8 21H16M12 21V17C9.23858 17 7 14.7614 7 12V4H17V12C17 13.1256 16.6281 14.1643 16.0004 15M17 6H18.5C19.8807 6 21 7.11929 21 8.5C21 9.88071 19.8807 11 18.5 11H17M7 11H5.5C4.11929 11 3 9.88071 3 8.5C3 7.11929 4.11929 6 5.5 6H7"
-                stroke="var(--mid-gray)"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+          <section class="profile-picture">
+            <img src="../assets/images/resume/user-full.png" alt="user-image" />
+          </section>
+
+          <section class="row">
+            <p class="w-350 my-50">
+              I’m a profesional FrontEnd Developer, Provide awsome codeing
+              services to my clients. my vision is to make my clients happy and
+              satisfied.
+            </p>
+          </section>
+          <section class="row skills" data-tooltip="01">
+            <div>
+              <h2 class="mb-12 letter-4">SKILLS</h2>
+              <ul>
+                <li>
+                  <div class="skills-list">
+                    <h3>HTML</h3>
+                    <div>
+                      <ul class="skills-rate">
+                        <li
+                          class="skills-rate-active"
+                          style="width: calc((250px * 60) / 100)"
+                        ></li>
+                        <li
+                          class="skills-rate-disabled"
+                          style="width: calc((250px * 40) / 100)"
+                        ></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skills-list">
+                    <h3>CSS</h3>
+                    <div>
+                      <ul class="skills-rate">
+                        <li
+                          class="skills-rate-active"
+                          style="width: calc((250px * 80) / 100)"
+                        ></li>
+                        <li
+                          class="skills-rate-disabled"
+                          style="width: calc((250px * 20) / 100)"
+                        ></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skills-list">
+                    <h3>Javascript</h3>
+                    <div>
+                      <ul class="skills-rate">
+                        <li
+                          class="skills-rate-active"
+                          style="width: calc((250px * 50) / 100)"
+                        ></li>
+                        <li
+                          class="skills-rate-disabled"
+                          style="width: calc((250px * 50) / 100)"
+                        ></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skills-list">
+                    <h3>Vue</h3>
+                    <div>
+                      <ul class="skills-rate">
+                        <li
+                          class="skills-rate-active"
+                          style="width: calc((250px * 80) / 100)"
+                        ></li>
+                        <li
+                          class="skills-rate-disabled"
+                          style="width: calc((250px * 20) / 100)"
+                        ></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li>
+                  <div class="skills-list">
+                    <h3>Photoshop</h3>
+                    <div>
+                      <ul class="skills-rate">
+                        <li class="skills-rate-active"    style="width: calc((250px * 60) / 100)"></li>
+                        <li class="skills-rate-disabled"       style="width: calc((250px * 40) / 100)"></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+         
+          <section class="row mb-25 mt-50">
+         
             <h2 class="py-12 letter-4">CERTIFICATE</h2>
             <ul>
-              <li>
+              <li class="py-12">
                 <div>
                   <span class="date"> 2024 </span>
                   <h3>CodingFront</h3>
@@ -357,33 +472,150 @@
               </li>
             </ul>
           </section>
-          <section class="row my-25">
-            <svg
-              class="icon"
-              width="800px"
-              height="800px"
-              viewBox="0 0 24 24"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M5 21C5 17.134 8.13401 14 12 14C15.866 14 19 17.134 19 21M16 7C16 9.20914 14.2091 11 12 11C9.79086 11 8 9.20914 8 7C8 4.79086 9.79086 3 12 3C14.2091 3 16 4.79086 16 7Z"
-                stroke="var(--mid-gray)"
-                stroke-width="2"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </svg>
+        </div>
+        <div class="right">
+          <section class="user-detail my-50">
+            <div class="row-name">
+              <div>
+                <h1 class="fName-lName">Amir</h1>
+                <h2 class="fName-lName">Samimi</h2>
+              </div>
+              <div>
+                <h4 class="job-position mt-6 mb-12">FrontEnd Eng.</h4>
+              </div>
+            </div>
+
+            <div class="call-info">
+                <div>April 08, 1995</div>
+              <div>amirnsamimi@gmail.com</div>
+              <div> (+98) 912 497 1667 or</div>
+              <div>Tehran, Iran</div>
+            </div>
+
+            <div class="socials">
+              <span>
+                <svg
+                  class="icon"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"
+                    fill="#0F0F0F"
+                  />
+                </svg>
+                <svg
+                  class="icon"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9.29183 21V18.4407L9.3255 16.6219C9.36595 16.0561 9.58639 15.5228 9.94907 15.11C9.95438 15.1039 9.95972 15.0979 9.9651 15.0919C9.9791 15.0763 9.96988 15.0511 9.94907 15.0485V15.0485C7.52554 14.746 5.0005 13.7227 5.0005 9.26749C4.9847 8.17021 5.3427 7.10648 6.00437 6.27215C6.02752 6.24297 6.05103 6.21406 6.07492 6.18545V6.18545C6.10601 6.1482 6.11618 6.09772 6.10194 6.05134C6.10107 6.04853 6.10021 6.04571 6.09935 6.04289C6.0832 5.9899 6.06804 5.93666 6.05388 5.88321C5.81065 4.96474 5.86295 3.98363 6.20527 3.09818C6.20779 3.09164 6.21034 3.08511 6.2129 3.07858C6.22568 3.04599 6.25251 3.02108 6.28698 3.01493V3.01493C6.50189 2.97661 7.37036 2.92534 9.03298 4.07346C9.08473 4.10919 9.13724 4.14609 9.19053 4.18418V4.18418C9.22901 4.21168 9.27794 4.22011 9.32344 4.20716C9.32487 4.20675 9.32631 4.20634 9.32774 4.20593C9.41699 4.18056 9.50648 4.15649 9.59617 4.1337C11.1766 3.73226 12.8234 3.73226 14.4038 4.1337C14.4889 4.1553 14.5737 4.17807 14.6584 4.20199C14.6602 4.20252 14.6621 4.20304 14.6639 4.20356C14.7174 4.21872 14.7749 4.20882 14.8202 4.17653V4.17653C14.8698 4.14114 14.9187 4.10679 14.967 4.07346C16.6257 2.92776 17.4894 2.9764 17.7053 3.01469V3.01469C17.7404 3.02092 17.7678 3.04628 17.781 3.07946C17.7827 3.08373 17.7843 3.08799 17.786 3.09226C18.1341 3.97811 18.1894 4.96214 17.946 5.88321C17.9315 5.93811 17.9159 5.9928 17.8993 6.04723V6.04723C17.8843 6.09618 17.8951 6.14942 17.9278 6.18875C17.9289 6.18998 17.9299 6.19121 17.9309 6.19245C17.9528 6.21877 17.9744 6.24534 17.9956 6.27215C18.6573 7.10648 19.0153 8.17021 18.9995 9.26749C18.9995 13.747 16.4565 14.7435 14.0214 15.015V15.015C14.0073 15.0165 14.001 15.0334 14.0105 15.0439C14.0141 15.0479 14.0178 15.0519 14.0214 15.0559C14.2671 15.3296 14.4577 15.6544 14.5811 16.0103C14.7101 16.3824 14.7626 16.7797 14.7351 17.1754V21"
+                    stroke="#323232"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M4 17C4.36915 17.0523 4.72159 17.1883 5.03065 17.3975C5.3397 17.6068 5.59726 17.8838 5.7838 18.2078C5.94231 18.4962 6.15601 18.7504 6.41264 18.9557C6.66927 19.161 6.96379 19.3135 7.27929 19.4043C7.59478 19.4952 7.92504 19.5226 8.25112 19.485C8.5772 19.4475 8.89268 19.3457 9.17946 19.1855"
+                    stroke="#323232"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+                amirnsamimi</span
+              >
+              <span>
+                <svg
+                  class="icon"
+                  fill="#000000"
+                  version="1.1"
+                  id="Capa_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="800px"
+                  height="800px"
+                  viewBox="0 0 552.77 552.77"
+                  xml:space="preserve"
+                >
+                  <g>
+                    <g>
+                      <path
+                        d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95
+                         C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z"
+                      />
+                      <path
+                        d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95
+                         C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z"
+                      />
+                      <path
+                        d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846
+                         c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192
+                         c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666
+                         c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343
+                         c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627
+                         c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48
+                         S535.836,228.581,525.732,215.282z"
+                      />
+                    </g>
+                  </g>
+                </svg>
+                amirsamimi
+              </span>
+            </div>
+          </section>
+         
+          <section class="row reference my-50 w-350 " data-tooltip="02">
+            <div>
+              <h2 class="mb-12 letter-4">EXPERIENCE</h2>
+              <ul>
+                <li class="py-12">
+                  <div>
+                    <h3>BioLink</h3>
+                    <span class="date"> FrontEnd Developer </span>
+                    <h4 class="heading-4">
+                      BioLink is a static website with a company’s or a person’s
+                      all essential links and information on it so that user
+                      will put a single link on social media.
+                    </h4>
+                  </div>
+                </li>
+                <li class="py-12">
+                  <div>
+                    <h3>Tacohead</h3>
+                    <span class="date">FrontEnd Developer </span>
+
+                    <h4 class="heading-4">
+                      Tacohead is a static menu website. With the help of
+                      Tachohead, user of a service (like resturants, cafes,
+                      beauty salons) can see the price before ordering.
+                    </h4>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <section class="row ">
+          
             <h2 class="py-12 letter-4">REFERENCE</h2>
             <ul>
-              <li>
+              <li class="py-12">
                 <div>
                   <span class="date"> Sr. Developer </span>
                   <h3>Javid Izadfar</h3>
                   <h4 class="heading-4">Email: javid.izadfar@gmail.com</h4>
                 </div>
               </li>
-              <li>
+              <li class="py-12">
                 <div>
                   <span class="date"> Sr. Developer </span>
                   <h3>Milad Heydari</h3>
@@ -582,30 +814,30 @@
                       <g>
                         <path
                           d="M439.5,224h-41.313l0.567-17h8.746c4.142,0,7.5-3.357,7.5-7.5s-3.358-7.5-7.5-7.5h-25.223
-                           c-3.515-18.205-19.561-32-38.777-32s-35.262,13.795-38.777,32H124.118l261-57.67c4.044-0.894,6.599-4.896,5.705-8.941
-                           c-0.894-4.045-4.896-6.594-8.941-5.705L264.22,145.682l-1.834-8.3c-2.795-12.652-15.361-20.674-28.017-17.876L187.5,129.862
-                           c-12.652,2.795-20.672,15.363-17.876,28.017l1.834,8.3L53.795,192.177c-4.044,0.894-6.599,4.896-5.705,8.941
-                           c0.702,3.179,3.329,5.416,6.384,5.804c0.245,0.034,0.493,0.055,0.745,0.064c0.063,0.002,0.124,0.016,0.188,0.016
-                           c0.021,0,0.042-0.003,0.063-0.003c0.01,0,0.02,0.002,0.03,0.002h8.746l0.567,17H23.5C10.542,224,0,234.542,0,247.5
-                           S10.542,271,23.5,271h42.88l4.594,137.816C71.687,430.228,89.027,447,110.451,447h242.098c21.424,0,38.765-16.772,39.478-38.184
-                           L396.621,271H439.5c12.958,0,23.5-10.542,23.5-23.5S452.458,224,439.5,224z M190.736,144.509l46.869-10.356
-                           c4.578-1.01,9.123,1.89,10.134,6.466l1.834,8.3l-63.469,14.024l-1.834-8.3C183.259,150.067,186.16,145.52,190.736,144.509z
-                            M23.5,256c-4.687,0-8.5-3.813-8.5-8.5s3.813-8.5,8.5-8.5h41.813l0.567,17H23.5z M343.5,175c10.894,0,20.146,7.149,23.321,17
-                           h-46.643C323.354,182.149,332.606,175,343.5,175z M352.549,432H110.451c-10.956,0-20.184-7.075-23.336-17h288.77
-                           C372.733,424.925,363.505,432,352.549,432z M377.313,400H85.688l-6.434-193h304.492L377.313,400z M439.5,256h-42.379l0.567-17
-                           H439.5c4.687,0,8.5,3.813,8.5,8.5S444.187,256,439.5,256z"
+                               c-3.515-18.205-19.561-32-38.777-32s-35.262,13.795-38.777,32H124.118l261-57.67c4.044-0.894,6.599-4.896,5.705-8.941
+                               c-0.894-4.045-4.896-6.594-8.941-5.705L264.22,145.682l-1.834-8.3c-2.795-12.652-15.361-20.674-28.017-17.876L187.5,129.862
+                               c-12.652,2.795-20.672,15.363-17.876,28.017l1.834,8.3L53.795,192.177c-4.044,0.894-6.599,4.896-5.705,8.941
+                               c0.702,3.179,3.329,5.416,6.384,5.804c0.245,0.034,0.493,0.055,0.745,0.064c0.063,0.002,0.124,0.016,0.188,0.016
+                               c0.021,0,0.042-0.003,0.063-0.003c0.01,0,0.02,0.002,0.03,0.002h8.746l0.567,17H23.5C10.542,224,0,234.542,0,247.5
+                               S10.542,271,23.5,271h42.88l4.594,137.816C71.687,430.228,89.027,447,110.451,447h242.098c21.424,0,38.765-16.772,39.478-38.184
+                               L396.621,271H439.5c12.958,0,23.5-10.542,23.5-23.5S452.458,224,439.5,224z M190.736,144.509l46.869-10.356
+                               c4.578-1.01,9.123,1.89,10.134,6.466l1.834,8.3l-63.469,14.024l-1.834-8.3C183.259,150.067,186.16,145.52,190.736,144.509z
+                                M23.5,256c-4.687,0-8.5-3.813-8.5-8.5s3.813-8.5,8.5-8.5h41.813l0.567,17H23.5z M343.5,175c10.894,0,20.146,7.149,23.321,17
+                               h-46.643C323.354,182.149,332.606,175,343.5,175z M352.549,432H110.451c-10.956,0-20.184-7.075-23.336-17h288.77
+                               C372.733,424.925,363.505,432,352.549,432z M377.313,400H85.688l-6.434-193h304.492L377.313,400z M439.5,256h-42.379l0.567-17
+                               H439.5c4.687,0,8.5,3.813,8.5,8.5S444.187,256,439.5,256z"
                         />
                         <path
                           d="M392,159.5c0,12.958,10.542,23.5,23.5,23.5s23.5-10.542,23.5-23.5S428.458,136,415.5,136S392,146.542,392,159.5z
-                            M415.5,151c4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5s-8.5-3.813-8.5-8.5S410.813,151,415.5,151z"
+                                M415.5,151c4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5s-8.5-3.813-8.5-8.5S410.813,151,415.5,151z"
                         />
                         <path
                           d="M375.5,103c12.958,0,23.5-10.542,23.5-23.5S388.458,56,375.5,56S352,66.542,352,79.5S362.542,103,375.5,103z M375.5,71
-                           c4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5s-8.5-3.813-8.5-8.5S370.813,71,375.5,71z"
+                               c4.687,0,8.5,3.813,8.5,8.5s-3.813,8.5-8.5,8.5s-8.5-3.813-8.5-8.5S370.813,71,375.5,71z"
                         />
                         <path
                           d="M311.5,117.951c7.969,0,14.452-6.482,14.452-14.451s-6.483-14.451-14.452-14.451c-7.968,0-14.451,6.482-14.451,14.451
-                           S303.532,117.951,311.5,117.951z"
+                               S303.532,117.951,311.5,117.951z"
                         />
                         <path
                           d="M339.5,39c6.341,0,11.5-5.159,11.5-11.5S345.841,16,339.5,16S328,21.159,328,27.5S333.159,39,339.5,39z"
@@ -700,243 +932,9 @@
                 <h3>TRAVEL</h3>
               </li>
               <!-- <li>
-                <h3>MUSIC</h3>
-              </li> -->
+                    <h3>MUSIC</h3>
+                  </li> -->
             </ul>
-          </section>
-        </div>
-        <div class="right">
-          <section>
-            <h2 class="fName-lName">Amir</h2>
-            <h3 class="fName-lName">Samimi</h3>
-            <h4 class="job-position mt-6 mb-12">FrontEnd Eng.</h4>
-            <div class="socials">
-              <span>
-                <svg
-                  class="icon"
-                  width="800px"
-                  height="800px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M23.1117 4.49449C23.4296 2.94472 21.9074 1.65683 20.4317 2.227L2.3425 9.21601C0.694517 9.85273 0.621087 12.1572 2.22518 12.8975L6.1645 14.7157L8.03849 21.2746C8.13583 21.6153 8.40618 21.8791 8.74917 21.968C9.09216 22.0568 9.45658 21.9576 9.70712 21.707L12.5938 18.8203L16.6375 21.8531C17.8113 22.7334 19.5019 22.0922 19.7967 20.6549L23.1117 4.49449ZM3.0633 11.0816L21.1525 4.0926L17.8375 20.2531L13.1 16.6999C12.7019 16.4013 12.1448 16.4409 11.7929 16.7928L10.5565 18.0292L10.928 15.9861L18.2071 8.70703C18.5614 8.35278 18.5988 7.79106 18.2947 7.39293C17.9906 6.99479 17.4389 6.88312 17.0039 7.13168L6.95124 12.876L3.0633 11.0816ZM8.17695 14.4791L8.78333 16.6015L9.01614 15.321C9.05253 15.1209 9.14908 14.9366 9.29291 14.7928L11.5128 12.573L8.17695 14.4791Z"
-                    fill="#0F0F0F"
-                  />
-                </svg>
-                <svg
-                  class="icon"
-                  width="800px"
-                  height="800px"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M9.29183 21V18.4407L9.3255 16.6219C9.36595 16.0561 9.58639 15.5228 9.94907 15.11C9.95438 15.1039 9.95972 15.0979 9.9651 15.0919C9.9791 15.0763 9.96988 15.0511 9.94907 15.0485V15.0485C7.52554 14.746 5.0005 13.7227 5.0005 9.26749C4.9847 8.17021 5.3427 7.10648 6.00437 6.27215C6.02752 6.24297 6.05103 6.21406 6.07492 6.18545V6.18545C6.10601 6.1482 6.11618 6.09772 6.10194 6.05134C6.10107 6.04853 6.10021 6.04571 6.09935 6.04289C6.0832 5.9899 6.06804 5.93666 6.05388 5.88321C5.81065 4.96474 5.86295 3.98363 6.20527 3.09818C6.20779 3.09164 6.21034 3.08511 6.2129 3.07858C6.22568 3.04599 6.25251 3.02108 6.28698 3.01493V3.01493C6.50189 2.97661 7.37036 2.92534 9.03298 4.07346C9.08473 4.10919 9.13724 4.14609 9.19053 4.18418V4.18418C9.22901 4.21168 9.27794 4.22011 9.32344 4.20716C9.32487 4.20675 9.32631 4.20634 9.32774 4.20593C9.41699 4.18056 9.50648 4.15649 9.59617 4.1337C11.1766 3.73226 12.8234 3.73226 14.4038 4.1337C14.4889 4.1553 14.5737 4.17807 14.6584 4.20199C14.6602 4.20252 14.6621 4.20304 14.6639 4.20356C14.7174 4.21872 14.7749 4.20882 14.8202 4.17653V4.17653C14.8698 4.14114 14.9187 4.10679 14.967 4.07346C16.6257 2.92776 17.4894 2.9764 17.7053 3.01469V3.01469C17.7404 3.02092 17.7678 3.04628 17.781 3.07946C17.7827 3.08373 17.7843 3.08799 17.786 3.09226C18.1341 3.97811 18.1894 4.96214 17.946 5.88321C17.9315 5.93811 17.9159 5.9928 17.8993 6.04723V6.04723C17.8843 6.09618 17.8951 6.14942 17.9278 6.18875C17.9289 6.18998 17.9299 6.19121 17.9309 6.19245C17.9528 6.21877 17.9744 6.24534 17.9956 6.27215C18.6573 7.10648 19.0153 8.17021 18.9995 9.26749C18.9995 13.747 16.4565 14.7435 14.0214 15.015V15.015C14.0073 15.0165 14.001 15.0334 14.0105 15.0439C14.0141 15.0479 14.0178 15.0519 14.0214 15.0559C14.2671 15.3296 14.4577 15.6544 14.5811 16.0103C14.7101 16.3824 14.7626 16.7797 14.7351 17.1754V21"
-                    stroke="#323232"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path
-                    d="M4 17C4.36915 17.0523 4.72159 17.1883 5.03065 17.3975C5.3397 17.6068 5.59726 17.8838 5.7838 18.2078C5.94231 18.4962 6.15601 18.7504 6.41264 18.9557C6.66927 19.161 6.96379 19.3135 7.27929 19.4043C7.59478 19.4952 7.92504 19.5226 8.25112 19.485C8.5772 19.4475 8.89268 19.3457 9.17946 19.1855"
-                    stroke="#323232"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                amirnsamimi</span
-              >
-              <span>
-                <svg
-                  class="icon"
-                  fill="#000000"
-                  version="1.1"
-                  id="Capa_1"
-                  xmlns="http://www.w3.org/2000/svg"
-                  xmlns:xlink="http://www.w3.org/1999/xlink"
-                  width="800px"
-                  height="800px"
-                  viewBox="0 0 552.77 552.77"
-                  xml:space="preserve"
-                >
-                  <g>
-                    <g>
-                      <path
-                        d="M17.95,528.854h71.861c9.914,0,17.95-8.037,17.95-17.951V196.8c0-9.915-8.036-17.95-17.95-17.95H17.95
-                     C8.035,178.85,0,186.885,0,196.8v314.103C0,520.816,8.035,528.854,17.95,528.854z"
-                      />
-                      <path
-                        d="M17.95,123.629h71.861c9.914,0,17.95-8.036,17.95-17.95V41.866c0-9.914-8.036-17.95-17.95-17.95H17.95
-                     C8.035,23.916,0,31.952,0,41.866v63.813C0,115.593,8.035,123.629,17.95,123.629z"
-                      />
-                      <path
-                        d="M525.732,215.282c-10.098-13.292-24.988-24.223-44.676-32.791c-19.688-8.562-41.42-12.846-65.197-12.846
-                     c-48.268,0-89.168,18.421-122.699,55.27c-6.672,7.332-11.523,5.729-11.523-4.186V196.8c0-9.915-8.037-17.95-17.951-17.95h-64.192
-                     c-9.915,0-17.95,8.035-17.95,17.95v314.103c0,9.914,8.036,17.951,17.95,17.951h71.861c9.915,0,17.95-8.037,17.95-17.951V401.666
-                     c0-45.508,2.748-76.701,8.244-93.574c5.494-16.873,15.66-30.422,30.488-40.649c14.83-10.227,31.574-15.343,50.24-15.343
-                     c14.572,0,27.037,3.58,37.393,10.741c10.355,7.16,17.834,17.19,22.436,30.104c4.604,12.912,6.904,41.354,6.904,85.33v132.627
-                     c0,9.914,8.035,17.951,17.949,17.951h71.861c9.914,0,17.949-8.037,17.949-17.951V333.02c0-31.445-1.982-55.607-5.941-72.48
-                     S535.836,228.581,525.732,215.282z"
-                      />
-                    </g>
-                  </g>
-                </svg>
-                amirsamimi
-              </span>
-            </div>
-          </section>
-
-          <section class="row numerictags skills my-50" data-tooltip="01">
-            <div>
-              <h2 class="mb-12 letter-4">SKILLS</h2>
-              <ul>
-                <li>
-                  <div class="skills-list">
-                    <h3>HTML</h3>
-                    <div>
-                      <ul class="skills-rate">
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="skills-list">
-                    <h3>CSS</h3>
-                    <div>
-                      <ul class="skills-rate">
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="skills-list">
-                    <h3>Javascript</h3>
-                    <div>
-                      <ul class="skills-rate">
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="skills-list">
-                    <h3>Vue</h3>
-                    <div>
-                      <ul class="skills-rate">
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-                <li>
-                  <div class="skills-list">
-                    <h3>Photoshop</h3>
-                    <div>
-                      <ul class="skills-rate">
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-active"></li>
-                        <li class="skills-rate-disabled"></li>
-                        <li class="skills-rate-disabled"></li>
-                      </ul>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section class="row numerictags reference my-50" data-tooltip="02">
-            <div>
-              <h2 class="mb-12 letter-4">EXPERIENCE</h2>
-              <ul>
-                <li>
-                  <div>
-                    <h3>BioLink</h3>
-                    <span class="date"> FrontEnd Developer </span>
-                    <h4 class="heading-4">
-                      BioLink is a static website with a company’s or a person’s
-                      all essential links and information on it so that user
-                      will put a single link on social media.
-                    </h4>
-                  </div>
-                </li>
-                <li>
-                  <div>
-                    <h3>Tacohead</h3>
-                    <span class="date">FrontEnd Developer </span>
-
-                    <h4 class="heading-4">
-                      Tacohead is a static menu website. With the help of
-                      Tachohead, user of a service (like resturants, cafes,
-                      beauty salons) can see the price before ordering.
-                    </h4>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section class="row numerictags reference my-50" data-tooltip="03">
-            <div>
-              <h2 class="mb-12 letter-4">EDUCATION</h2>
-              <ul>
-                <li>
-                  <div>
-                    <span class="date"> 2012 - 2018 </span>
-                    <h3>Azad Islamic University, Central Tehran Branch</h3>
-                    <h4 class="heading-4">Bachelor of Software Engineering</h4>
-                  </div>
-                </li>
-              </ul>
-            </div>
           </section>
         </div>
       </div>
