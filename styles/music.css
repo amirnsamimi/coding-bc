@@ -78,7 +78,6 @@ main {
   position: relative;
   width: 100%;
   perspective: 50px;
-
 }
 
 .disc {
@@ -200,40 +199,38 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
-  
-    .top-container{
-        display: flex;
-        justify-content: space-between;
-        margin: 30px 0;
-    }
+  .top-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+  }
 
-    .disc-container{
-        display: flex;
-        width: 550px;
-    }
-    .disc{
-        width: 280px;
-    }
-    .cover{
-        width: 300px;
-    }
-   .disc-container:hover .disc {
+  .disc-container {
+    display: flex;
+    width: 550px;
+  }
+  .disc {
+    width: 280px;
+  }
+  .cover {
+    width: 300px;
+  }
+  .disc-container:hover .disc {
     transform: translateX(75%) rotate(180deg);
   }
-  .cover:hover {
+  .disc-container:hover .cover {
     transform-style: preserve-3d;
     transform: rotateY(-2deg);
   }
 
-  .btn-primary{
-   width: max-content; 
+  .btn-primary {
+    width: max-content;
   }
   .btn-primary:hover {
     color: var(--dark-purple);
     border: 2px solid var(--dark-purple);
     background-color: transparent;
     fill: var(--dark-purple);
-    
   }
   .btn-primary:hover path {
     fill: var(--dark-purple);
@@ -241,10 +238,8 @@ hr {
 
   .albums ul li {
     width: 23%;
-
-}
-.album-detail{
+  }
+  .album-detail {
     width: calc(100% - 550px);
-}
-
+  }
 }
