@@ -1,5 +1,6 @@
 :root {
   --yellow: #ffc857;
+  --yellow-fade: #fde6b8;
   --red: #db3a34;
   --dark-gray: #323031;
   --white: #ffffff;
@@ -15,6 +16,23 @@ body {
   font-family: "Vazirmatn";
 }
 
+a {
+  text-decoration: none;
+  color: var(--dark-gray);
+}
+
+.btn-secondary {
+  background-color: var(--yellow);
+  display: flex;
+  padding: 12px 12px;
+  width: 150px;
+  margin: 12px;
+  border-radius: 8px;
+  gap: 10px;
+  align-items: center;
+  font-size: 14px;
+}
+
 header {
   background-color: var(--yellow);
   width: 100%;
@@ -22,6 +40,7 @@ header {
   position: fixed;
   top: 0;
   box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
 }
 
 header nav {
@@ -37,7 +56,8 @@ header nav ul {
 header nav ul::-webkit-scrollbar {
   display: none;
 }
-header li {
+header li a {
+  display: block;
   width: 60px;
   height: 60px;
   margin: 10px 5px;
@@ -47,7 +67,7 @@ header li {
   font-size: 10px;
 }
 
-header li img {
+header a img {
   width: 32px;
   height: 32px;
 }
@@ -58,14 +78,14 @@ main {
   height: 300dvh;
 }
 
-main h2 {
+.left h2 {
   color: var(--red);
   width: 100%;
   text-align: center;
   margin: 20px 0 10px 0;
 }
 
-main li {
+.left li {
   display: flex;
   background-color: rgba(255, 255, 255, 0.2);
   color: var(--white);
@@ -74,11 +94,11 @@ main li {
   margin: 10px 0;
   border-radius: 12px;
 }
-main li h3 {
+.left li h3 {
   font-weight: 900;
   font-size: 14px;
 }
-main li p {
+.left li p {
   overflow: hidden;
   line-height: 25px;
   font-weight: 200;
@@ -89,7 +109,7 @@ main li p {
   margin: 4px 0;
 }
 
-main li img {
+.left li img {
   width: 85px;
   object-fit: cover;
   height: 85px;
@@ -113,11 +133,31 @@ main li img {
 .pricing span:last-child {
   font-size: 8px;
 }
+.right {
+  display: none;
+}
+
+footer {
+  width: 100%;
+  background-color: var(--yellow-fade) ;
+  color:var(--dark-gray);
+  height: 30px;
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
 
 @media screen and (min-width: 720px) {
   .safe-width {
-    width: 980px;
-    margin: 0 auto;
+    max-width: 980px;
+    margin-inline: auto;
+    display: flex;
+  }
+  .right {
+    margin-top: 87px;
+    display: block;
   }
 
   header nav {
@@ -127,25 +167,57 @@ main li img {
   main {
     margin-top: 90px;
   }
-  main h2{
+  .left h2 {
     border-bottom: 1px solid var(--red);
     padding: 12px;
     font-size: 32px;
     text-align: right;
   }
-  main ul{
+  .left ul {
     display: flex;
     flex-wrap: wrap;
-    gap:1%;
+    gap: 1%;
   }
-  main li{
+  .left li {
     display: block;
     width: 49.5%;
     height: 400px;
+    padding: 12px;
   }
-  main li img{
+  .left li img {
     width: 100%;
     height: 200px;
   }
-  
+
+  .detail-container {
+    display: grid;
+    justify-content: space-between;
+    height: 200px;
+  }
+
+  .left li p {
+    line-height: 25px;
+    font-weight: 200;
+    color: rgba(255, 255, 255, 0.7);
+    text-wrap: wrap;
+    width: 100%;
+    margin: 4px 0;
+  }
+  .pricing {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    gap: 2px;
+  }
+
+  .right ul {
+    position: sticky;
+    top: 90px;
+    margin: 0 12px;
+  }
+
+  .right img {
+    width: 24px;
+    height: 24px;
+  }
 }
