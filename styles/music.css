@@ -199,6 +199,12 @@ hr {
 }
 
 @media screen and (min-width: 768px) {
+
+  .safe-width{
+    max-width:1440px;
+    margin:0 auto ;
+  } 
+
   .top-container {
     display: flex;
     justify-content: space-between;
