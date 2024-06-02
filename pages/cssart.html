@@ -188,6 +188,55 @@
         top: calc(50%);
         left: calc(50% - 100px);
       }
+
+      /*  heineken */
+      .heineken{
+        height: 500px ;
+        width: 980px;
+        background-image: radial-gradient( 51.6% 181.3% at 50% 50% ,#FFEDCD, #FFD963, #FFC700);
+        position: relative;
+      }
+      .heinekenStar-container{
+        width: 90px;
+        height: 85px;
+      }
+
+      .heinekenGlass-container{
+        width: 100%;
+        position: relative;
+        left:0;
+        right: 0;
+        
+        
+      }
+
+      .heinekenGlassLower{
+        height: 216px;
+        width: 89px;
+        background-color: #993045;
+        border-radius: 30px 30px 16px 16px;
+        position: absolute;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        bottom: 81px;
+        
+      }
+
+      .heinekenGlassTop{
+        height: 110px;
+        width: 70px;
+        background-color: #993045;
+        margin: -8px auto;
+        position: absolute;
+        bottom: 288px;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+       
+
+      }
+   
     </style>
   </head>
   <body>
@@ -216,5 +265,22 @@
         <div class="surface-circle-13  circle position-5"></div>
       </div>
     </section>
+
+
+    <section class="container">
+      <div class="heineken canvas">
+        <!-- Change Here -->
+        <div class="cap"></div>
+        <svg class="heinekenStar-container">
+
+        </svg>
+        <div class="heinekenGlassLower-container">
+          <div class="heinekenGlassTop"></div>
+          <div class="heinekenGlassLower"></div>
+        </div>
+      </div>
+    </section>
+
+
   </body>
 </html>
